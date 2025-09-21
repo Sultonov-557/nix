@@ -1,10 +1,10 @@
-{ inputs, config, pkgs, ... }:
+{ inputs, config, pkgs, lib,... }:
 
 {
   home.username = "sultonov";
   home.homeDirectory = "/home/sultonov";
 
-  home.stateVersion = "unstable";
+  home.stateVersion = "25.05";
 
   catppuccin = {
     enable = true;

@@ -72,10 +72,13 @@
     flake = "/home/sultonov/nixos";
   };
 
+  programs.zsh.enable=true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     nixfmt-rfc-style
+    regreet
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     git
@@ -121,6 +124,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "unstable"; # Did you read the comment?
+  system.stateVersion = "25.05"; # Did you read the comment?
 
 }

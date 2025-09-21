@@ -12,10 +12,6 @@
       url = "github:NotAShelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    illogical-impulse = {
-      url = "github:bigsaltyfishes/end-4-dots";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
@@ -39,7 +35,6 @@
                   ./home.nix
                   inputs.catppuccin.homeManagerModules.catppuccin
                   inputs.nvf.homeManagerModules.default
-                  inputs.illogical-impulse.homeManagerModules.default
                 ];
               };
             }
