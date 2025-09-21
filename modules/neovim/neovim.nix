@@ -1,9 +1,7 @@
 { pkgs, ... }@inputs:
 
 {
-  imports = [
-    ./core
-  ];
+  imports = [ ./core ];
 
   programs.neovim = {
     enable = true;
@@ -27,6 +25,7 @@
 
     settings = {
       vim = {
+
         theme = {
           enable = true;
           name = "catppuccin";
@@ -43,16 +42,16 @@
         terminal.toggleterm.enable = true;
         formatter.conform-nvim.enable = true;
         tabline.nvimBufferline.enable = true;
-                                
+
         lsp.enable = true;
         lsp.formatOnSave = true;
         languages = {
           enableTreesitter = true;
 
-          nix={                             
-           enable = true;
-           format.enable=true;
-          format.package = pkgs.nixfmt-rfc-style;
+          nix = {
+            enable = true;
+            format.enable = true;
+            format.package = pkgs.nixfmt-rfc-style;
           };
           ts.enable = true;
         };

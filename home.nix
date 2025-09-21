@@ -19,6 +19,6 @@
     ./modules/zsh.nix
     ./modules/starship.nix
     ./modules/git.nix
-    ./modules/neovim.nix
+    ./modules/neovim/neovim.nix
   ];
 }
