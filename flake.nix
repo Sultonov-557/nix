@@ -2,7 +2,7 @@
   description = "My NixOS config";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-25.05";
+    nixpkgs.url = "github:nixos/nixpkgs";
     catppuccin.url = "github:catppuccin/nix";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -10,6 +10,10 @@
     };
     nvf = {
       url = "github:NotAShelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    illogical-impulse = {
+      url = "github:bigsaltyfishes/end-4-dots";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -35,6 +39,7 @@
                   ./home.nix
                   inputs.catppuccin.homeManagerModules.catppuccin
                   inputs.nvf.homeManagerModules.default
+                  inputs.illogical-impulse.homeManagerModules.default
                 ];
               };
             }

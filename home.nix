@@ -1,10 +1,10 @@
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 
 {
   home.username = "sultonov";
   home.homeDirectory = "/home/sultonov";
 
-  home.stateVersion = "25.05";
+  home.stateVersion = "unstable";
 
   catppuccin = {
     enable = true;
@@ -19,6 +19,7 @@
     ./modules/zsh.nix
     ./modules/starship.nix
     ./modules/git.nix
+    ./modules/hyprland/hypr.nix
     ./modules/neovim/neovim.nix
   ];
 }

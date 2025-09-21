@@ -4,7 +4,6 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    ./modules/zsh.nix
   ];
 
   # Bootloader.
@@ -41,6 +40,8 @@
       PasswordAuthentication = true;
     };
   };
+
+  services.udisks2.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.sultonov = {
@@ -120,6 +121,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "25.05"; # Did you read the comment?
+  system.stateVersion = "unstable"; # Did you read the comment?
 
 }
