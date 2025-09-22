@@ -28,10 +28,22 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
+  services.xserver = {
+    enable=true;
+
+    xkb = {
+      layout = "us";
+      variant = "";
+    };
   };
+        hardware.opengl.enable = true;
+
+  services.displayManager.sddm={
+        enable = true;
+                wayland.enable=true;
+        };
+        programs.hyprland.enable=true;
+
 
   services.openssh = {
     enable = true;
@@ -78,7 +90,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     nixfmt-rfc-style
-    regreet
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     git

@@ -33,7 +33,7 @@
               home-manager.users.sultonov = {
                 imports = [
                   ./home.nix
-                  inputs.catppuccin.homeManagerModules.catppuccin
+                  inputs.catppuccin.homeModules.catppuccin
                   inputs.nvf.homeManagerModules.default
                 ];
               };
