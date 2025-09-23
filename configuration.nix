@@ -8,7 +8,8 @@
 
   # Bootloader.
   boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
+  boot.loader.grub.device = "nodev";
+  boot.loader.grub.efiSupport = true;
   boot.loader.grub.useOSProber = true;
 
   networking.hostName = "nixos"; # Define your hostname.
@@ -29,29 +30,20 @@
 
   # Configure keymap in X11
   services.xserver = {
-    enable=true;
+    enable = true;
 
     xkb = {
       layout = "us";
       variant = "";
     };
   };
-        hardware.opengl.enable = true;
+  hardware.opengl.enable = true;
 
-  services.displayManager.sddm={
-        enable = true;
-                wayland.enable=true;
-        };
-        programs.hyprland.enable=true;
-
-
-  services.openssh = {
+  services.displayManager.sddm = {
     enable = true;
-    settings = {
-      PermitRootLogin = "no";
-      PasswordAuthentication = true;
-    };
+    wayland.enable = true;
   };
+  programs.hyprland.enable = true;
 
   services.udisks2.enable = true;
 
@@ -84,13 +76,14 @@
     flake = "/home/sultonov/nixos";
   };
 
-  programs.zsh.enable=true;
+  programs.zsh.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     nixfmt-rfc-style
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    kitty
     wget
     git
     lazygit
@@ -103,6 +96,8 @@
     btop
     delta
     zoxide
+    rofi
+    firefox
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

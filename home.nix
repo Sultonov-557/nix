@@ -1,4 +1,9 @@
-{ inputs, config, pkgs, lib,... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}@inputs:
 
 {
   home.username = "sultonov";
@@ -13,10 +18,12 @@
 
     starship.enable = true;
     nvim.enable = true;
+    rofi.enable = true;
   };
 
   imports = [
     ./modules/zsh.nix
+    ./modules/kitty.nix
     ./modules/starship.nix
     ./modules/git.nix
     ./modules/hyprland/hypr.nix

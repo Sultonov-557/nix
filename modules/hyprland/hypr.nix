@@ -1,13 +1,18 @@
-{ pkgs, lib, ...} @inputs:
-
+{ pkgs, lib, ... }@inputs:
 {
-  programs.kitty.enable = true;
-         wayland.windowManager.hyprland.enable = true;
-         wayland.windowManager.hyprland.settings = {
-    "$mod" = "SUPER";
-    bind =
-      [
+  wayland.windowManager.hyprland = {
+    enable = true;
+
+    package = null;
+    portalPackage = null;
+
+                #plugins = [inputs.hyprland-plugins.packages.${pkgs.system}.split-monitor-workspaces];
+
+    settings = {
+      "$mod" = "SUPER";
+      bind = [
         "$mod, Return, exec, kitty"
+        "$mod, SPACE, exec, rofi -show drun"
       ]
       ++ (
         builtins.concatLists (builtins.genList (i:
@@ -20,4 +25,5 @@
           9)
       );
   };
+};
 }

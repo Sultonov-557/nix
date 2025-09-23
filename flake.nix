@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs";
     catppuccin.url = "github:catppuccin/nix";
+                 hyprland.url = "github:hyprwm/Hyprland";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -12,6 +13,10 @@
       url = "github:NotAShelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+                hyprland-plugins = {
+    url = "github:hyprwm/hyprland-plugins";
+    inputs.hyprland.follows = "hyprland";
+  };
   };
 
   outputs =
@@ -35,6 +40,7 @@
                   ./home.nix
                   inputs.catppuccin.homeModules.catppuccin
                   inputs.nvf.homeManagerModules.default
+                  
                 ];
               };
             }
