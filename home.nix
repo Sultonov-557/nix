@@ -27,6 +27,8 @@
     ./modules/starship.nix
     ./modules/git.nix
     ./modules/hyprland/hypr.nix
+    ./modules/hyprland/wallpaper.nix
+    ./modules/hyprland/panel.nix
     ./modules/neovim/neovim.nix
   ];
 }
