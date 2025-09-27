@@ -1,11 +1,11 @@
-{ pkgs, ... }@inputs:
+{ pkgs, inputs, ... }:
 
 {
-  home.packages = [
-    inputs.noctalia.packages.${pkgs.system}.default
-  ];
-  programs.noctalia-shell = {
+  programs.dankMaterialShell = {
     enable = true;
-    settings = { };
+    enableSystemd = true;
+    enableClipboard = true;
+    enableBrightnessControl = true;
+
   };
 }

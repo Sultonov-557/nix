@@ -1,61 +1,57 @@
 { pkgs, ... }@inputs:
 
 {
-  imports = [ ./core ];
 
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-
-    viAlias = true;
-    vimAlias = true;
-    vimdiffAlias = true;
-
-    extraPackages = with pkgs; [
-      gcc
-      nodejs
-      python3
-      ripgrep
-      fd
-    ];
-  };
-
-  programs.nvf = {
+  programs.nixvim = {
     enable = true;
 
-    settings = {
-      vim = {
+    colorschemes.catppuccin = {
+      enable = true;
 
-        theme = {
-          enable = true;
-          name = "catppuccin";
-          style = "mocha";
+      settings = {
+	flavour = "mocha";
+      };
+    };
+
+    plugins.neo-tree = {
+      enable = true;
+      enableDiagnostics = true;
+      enableGitStatus = true;
+      enableModifiedMarkers = true;
+      enableRefreshOnWrite = true;
+      closeIfLastWindow = true;
+      popupBorderStyle = "rounded"; # Type: null or one of “NC”, “double”, “none”, “rounded”, “shadow”, “single”, “solid” or raw lua code
+      buffers = {
+        bindToCwd = false;
+        followCurrentFile = {
+          enabled = true;
         };
-
-        viAlias = false;
-        vimAlias = true;
-
-        statusline.lualine.enable = true;
-        telescope.enable = true;
-        mini.fuzzy.enable = true;
-        filetree.neo-tree.enable = true;
-        terminal.toggleterm.enable = true;
-        formatter.conform-nvim.enable = true;
-        tabline.nvimBufferline.enable = true;
-
-        lsp.enable = true;
-        lsp.formatOnSave = true;
-        languages = {
-          enableTreesitter = true;
-
-          nix = {
-            enable = true;
-            format.enable = true;
-            format.package = pkgs.nixfmt-rfc-style;
-          };
-          ts.enable = true;
+      };
+      window = {
+        width = 40;
+        height = 15;
+        autoExpandWidth = false;
+        mappings = {
+          "<space>" = "none";
         };
       };
     };
+
+    opts = {
+      number = true;
+      relativenumber = true;
+      shiftwidth = 2;
+      #termguicolors = true;
+      ignorecase = true;
+      smartcase = true;
+
+      undofile = true;
+      swapfile = true;
+      backup = false;
+      autoread = true;
+
+      cursorline = true;
+    };
+
   };
 }

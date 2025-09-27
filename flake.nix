@@ -9,18 +9,13 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nvf = {
-      url = "github:NotAShelf/nvf";
+    nixvim = {
+      url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    quickshell = {
-      url = "github:outfoxxed/quickshell";
+    dankMaterialShell = {
+      url = "github:AvengeMedia/DankMaterialShell";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-    noctalia = {
-      url = "github:noctalia-dev/noctalia-shell";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.quickshell.follows = "quickshell";
     };
   };
 
@@ -31,6 +26,10 @@
       home-manager,
       ...
     }@inputs:
+    let
+      system = "x86_64-linux";
+      pkgs = import nixpkgs { inherit system; };
+    in
     {
       nixosConfigurations = {
         nixos = nixpkgs.lib.nixosSystem {
@@ -38,7 +37,6 @@
           specialArgs = inputs;
           modules = [
             ./configuration.nix
-            inputs.noctalia.nixosModules.default
             home-manager.nixosModules.home-manager
             {
               home-manager.backupFileExtension = "backup";
@@ -46,10 +44,10 @@
               home-manager.useUserPackages = true;
               home-manager.users.sultonov = {
                 imports = [
-                  ./home.nix
+                  (import ./home.nix { inherit pkgs inputs; })
                   inputs.catppuccin.homeModules.catppuccin
-                  inputs.nvf.homeManagerModules.default
-                  inputs.noctalia.homeModules.default
+                  inputs.nixvim.homeModules.default
+                  inputs.dankMaterialShell.homeModules.dankMaterialShell.default
                 ];
               };
             }
