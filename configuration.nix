@@ -99,6 +99,12 @@
     kitty
     wget
     git
+    wine
+     wineWowPackages.full
+  winetricks
+  vulkan-tools
+  dxvk
+    psmisc
     gcc
     lazygit
     tree-sitter
