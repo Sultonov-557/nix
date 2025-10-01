@@ -37,6 +37,7 @@
       variant = "";
     };
   };
+
   xdg.portal = {
     enable = true;
     wlr.enable = true;
@@ -68,8 +69,6 @@
     nerd-fonts.fira-code
   ];
 
-  virtualisation.virtualbox.guest.enable = true;
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -88,6 +87,10 @@
     nixfmt-rfc-style
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     hyprnome
+    yandex-music
+    telegram-desktop
+    discord
+    lutris
     kitty
     wget
     git
@@ -122,5 +125,6 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.05"; # Did you read the comment?
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
 }
