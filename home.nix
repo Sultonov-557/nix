@@ -3,7 +3,6 @@
   inputs,
   ...
 }:
-
 {
   home.username = "sultonov";
   home.homeDirectory = "/home/sultonov";
@@ -40,6 +39,6 @@
     (import ./modules/hyprland/hypr.nix { inherit pkgs inputs; })
     ./modules/hyprland/wallpaper.nix
     (import ./modules/hyprland/panel.nix { inherit pkgs inputs; })
-    ./modules/neovim/neovim.nix
+    ./modules/neovim/neovim.nix 
   ];
 }

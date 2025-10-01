@@ -9,18 +9,13 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     dankMaterialShell = {
       url = "github:AvengeMedia/DankMaterialShell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    hyprland-virtual-desktops = {
-      url = "github:levnikmyskin/hyprland-virtual-desktops";
-      inputs.nixpkgs.follows = "nixpkgs";
+    split-monitor-workspaces = {
+      url = "github:Duckonaut/split-monitor-workspaces";
+      inputs.hyprland.follows = "hyprland"; # <- make sure this line is present for the plugin to work as intended
     };
   };
 
@@ -51,7 +46,6 @@
                 imports = [
                   (import ./home.nix { inherit pkgs inputs; })
                   inputs.catppuccin.homeModules.catppuccin
-                  inputs.nixvim.homeModules.default
                   inputs.dankMaterialShell.homeModules.dankMaterialShell.default
                 ];
               };

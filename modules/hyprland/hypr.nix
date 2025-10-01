@@ -4,12 +4,17 @@
   wayland.windowManager.hyprland = {
     enable = true;
 
-    plugins = [ inputs.hyprland-virtual-desktops.packages.x86_64-linux.virtual-desktops ];
+    plugins = [ inputs.split-monitor-workspaces.packages.${pkgs.system}.split-monitor-workspaces ];
 
-    package = null;
+
+    package = inputs.hyprland.packages.${pkgs.system}.default;
     portalPackage = null;
 
     settings = {
+          plugin.split-monitor-workspaces = {
+        count=5;
+    };
+
       exec = "hyprctl dispatch submap global";
       submap = "global";
 
@@ -23,9 +28,6 @@
       ];
 
       "$mod" = "SUPER";
-      bindi = [
-        "SUPER,SUPER_L, global, caelestia:launcher"
-      ];
 
       bindl = [
         ", XF86AudioRaiseVolume, exec, dms ipc call audio increment 3"
@@ -41,6 +43,7 @@
         "$mod, V, exec, dms ipc call clipboard toggle"
         "$mod, Return, exec, kitty" # launch terminal
         "$mod, W, exec, firefox"
+        "$mod, E, exec, nautilus"
         "$mod, M, exec, yandex-music"
         "$mod, T, exec, Telegram"
         "$mod, D, exec, discord"
@@ -55,8 +58,8 @@
             ws = i + 1;
           in
           [
-            "$mod, code:1${toString i}, workspace, ${toString ws}"
-            "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
+            "$mod, code:1${toString i}, split-workspace, ${toString ws}"
+            "$mod ALT, code:1${toString i}, split-movetoworkspace, ${toString ws}"
           ]
         ) 9
       ));
