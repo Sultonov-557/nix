@@ -19,6 +19,8 @@
     };
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     zen-browser.inputs.nixpkgs.follows = "nixpkgs";
+
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
   outputs =
@@ -50,6 +52,7 @@
                   inputs.catppuccin.homeModules.catppuccin
                   inputs.dankMaterialShell.homeModules.dankMaterialShell.default
                   inputs.zen-browser.homeModules.default
+                  inputs.nix-flatpak.homeManagerModules.nix-flatpak
                 ];
               };
             }

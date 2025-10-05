@@ -13,22 +13,11 @@
   boot.loader.grub.useOSProber = true;
 
   networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Enable networking
   networking.networkmanager.enable = true;
 
-  # Set your time zone.
   time.timeZone = "Asia/Tashkent";
-
-  # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
-  # Configure keymap in X11
   services.xserver = {
     enable = true;
 
@@ -44,10 +33,21 @@
   };
   hardware.opengl.enable = true;
 
-  services.displayManager.sddm = {
+  services.greetd = {
     enable = true;
-    wayland.enable = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --time-format '%I:%M %p | %a • %h | %F' --cmd Hyprland";
+        user = "sultonov";
+      };
+    };
   };
+
+  programs.direnv.enable = true;
+  services.upower.enable = true;
+  services.devmon.enable = true;
+  programs.steam.enable = true;
+
   programs.hyprland.enable = true;
 
   services.udisks2.enable = true;
@@ -67,6 +67,9 @@
 
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code
+    jetbrains-mono
+    nerd-font-patcher
+    noto-fonts-color-emoji
   ];
 
   # Allow unfree packages
@@ -88,16 +91,14 @@
   environment.systemPackages = with pkgs; [
     nixfmt-rfc-style
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    greetd.tuigreet
     hyprnome
     yandex-music
     telegram-desktop
     discord
-    lutris
     nautilus
-    gparted
-    steam
+    gnome-disk-utility
     kitty
-    wget
     git
     wine
     wineWowPackages.full
@@ -108,15 +109,6 @@
     gcc
     lazygit
     tree-sitter
-    curl
-    bat
-    eza
-    fzf
-    ripgrep
-    fd
-    btop
-    delta
-    zoxide
   ];
 
   # Open ports in the firewall.
@@ -157,13 +149,6 @@
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
-  ];
-
-  swapDevices = [
-    {
-      device = "/swapfile";
-      size = 8 * 1024; # 16GB
-    }
   ];
 
   # This value determines the NixOS release from which the default

@@ -8,6 +8,47 @@
     ./settings.nix
   ];
 
+  catppuccin = {
+    enable = true;
+    flavor = "mocha";
+    accent = "red";
+
+    starship.enable = true;
+    kitty.enable = true;
+    nvim.enable = true;
+    rofi.enable = true;
+    lazygit.enable = true;
+  };
+
+  nixpkgs.config.packageOverrides = pkgs: {
+    colloid-icon-theme = pkgs.colloid-icon-theme.override { colorVariants = [ "red" ]; };
+    catppuccin-gtk = pkgs.catppuccin-gtk.override {
+      accents = [ "red" ];
+      size = "standard";
+      variant = "mocha";
+    };
+    discord = pkgs.discord.override {
+      withOpenASAR = true;
+      withTTS = true;
+    };
+  };
+
+  home.pointerCursor = {
+    package = pkgs.catppuccin-cursors.mochaDark;
+    name = "Bibata-Modern-Classic";
+    size = 24;
+  };
+
+  home.packages = with pkgs; [
+    wlsunset
+    brightnessctl
+    numix-icon-theme-circle
+    colloid-icon-theme
+    catppuccin-gtk
+    catppuccin-kvantum
+    catppuccin-cursors.mochaDark
+  ];
+
   wayland.windowManager.hyprland = {
     enable = true;
 
