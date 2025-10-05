@@ -17,6 +17,8 @@
       url = "github:Duckonaut/split-monitor-workspaces";
       inputs.hyprland.follows = "hyprland"; # <- make sure this line is present for the plugin to work as intended
     };
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
+    zen-browser.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
@@ -34,7 +36,7 @@
       nixosConfigurations = {
         nixos = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
-          specialArgs = inputs;
+          specialArgs = { inherit inputs; };
           modules = [
             ./configuration.nix
             home-manager.nixosModules.home-manager
@@ -47,6 +49,7 @@
                   (import ./home.nix { inherit pkgs inputs; })
                   inputs.catppuccin.homeModules.catppuccin
                   inputs.dankMaterialShell.homeModules.dankMaterialShell.default
+                  inputs.zen-browser.homeModules.default
                 ];
               };
             }

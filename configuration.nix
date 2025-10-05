@@ -76,7 +76,7 @@
     enable = true;
     clean.enable = true;
     clean.extraArgs = "--keep-since 4d --keep 3";
-    flake = "/home/sultonov/nixos";
+    flake = "./.";
   };
 
   services.gvfs.enable = true;
@@ -100,10 +100,10 @@
     wget
     git
     wine
-     wineWowPackages.full
-  winetricks
-  vulkan-tools
-  dxvk
+    wineWowPackages.full
+    winetricks
+    vulkan-tools
+    dxvk
     psmisc
     gcc
     lazygit
@@ -117,24 +117,54 @@
     btop
     delta
     zoxide
-    firefox
   ];
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
+  networking.firewall.enable = true;
+  networking.firewall.allowedTCPPorts = [
+    80
+    443
+  ];
+  networking.firewall.allowedUDPPorts = [
+    80
+    443
+  ];
+
+  # Audio
+  hardware.pulseaudio.enable = false;
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+  };
+
+  # Bluetooth
+  services.blueman.enable = true;
+  hardware.bluetooth.enable = true;
+
+  # Nvidia
+  hardware.nvidia = {
+    modesetting.enable = true;
+    powerManagement.enable = true;
+    powerManagement.finegrained = true;
+    open = false;
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
 
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
   ];
 
-  swapDevices = [{
-    device = "/swapfile";
-    size = 8 * 1024; # 16GB
-  }];
+  swapDevices = [
+    {
+      device = "/swapfile";
+      size = 8 * 1024; # 16GB
+    }
+  ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
