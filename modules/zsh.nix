@@ -10,6 +10,10 @@
       cd = "z";
     };
 
+    initContent = ''
+      export PATH="/home/sultonov/.cache/.bun/bin:$PATH"
+    '';
+
     oh-my-zsh = {
       enable = true;
       theme = "agnoster";

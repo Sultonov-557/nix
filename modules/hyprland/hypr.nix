@@ -42,6 +42,7 @@
   home.packages = with pkgs; [
     wlsunset
     brightnessctl
+    cliphist
     numix-icon-theme-circle
     colloid-icon-theme
     catppuccin-gtk

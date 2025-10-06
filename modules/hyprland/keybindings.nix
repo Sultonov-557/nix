@@ -25,7 +25,7 @@
       "$mod, M, exec, yandex-music"
       "$mod, T, exec, Telegram"
       "$mod, D, exec, discord"
-      "$mod, G, exec, lutris"
+      "$mod, G, exec, steam"
       "$mod, L, exec, dms ipc call lock lock" # lock screen
       "$mod, Q, killactive" # killactive
       "$mod, F, togglefloating"
