@@ -9,9 +9,4 @@
     ];
   };
 
-  home.packages = with pkgs; [
-    flatpak
-    steam
-  ];
-
 }

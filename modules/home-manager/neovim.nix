@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   xdg.configFile."nvim" = {
-    source = ./config;
+    source = ../config/neovim;
     recursive = true;
   };
 
@@ -14,4 +14,5 @@
     enable = true;
     defaultEditor = true;
   };
+
 }

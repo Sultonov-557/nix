@@ -23,42 +23,37 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
-  outputs =
-    {
-      self,
-      nixpkgs,
-      home-manager,
-      ...
-    }@inputs:
-    let
-      system = "x86_64-linux";
-      pkgs = import nixpkgs { inherit system; };
-    in
-    {
-      nixosConfigurations = {
-        nixos = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = { inherit inputs; };
-          modules = [
-            ./configuration.nix
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.backupFileExtension = "backup";
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.sultonov = {
-                imports = [
-                  (import ./home.nix { inherit pkgs inputs; })
-                  inputs.catppuccin.homeModules.catppuccin
-                  inputs.dankMaterialShell.homeModules.dankMaterialShell.default
-                  inputs.zen-browser.homeModules.default
-                  inputs.nix-flatpak.homeManagerModules.nix-flatpak
-                ];
-              };
-            }
-          ];
-        };
+  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+    nixosConfigurations = {
+      nixos = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              backupFileExtension = "backup";
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.sultonov = { pkgs, ... }:
+                {
+                  imports = [
+                    (import ./home.nix {
+                      inherit pkgs inputs;
+                    })
+                    inputs.catppuccin.homeModules.catppuccin
+                    inputs.dankMaterialShell.homeModules.dankMaterialShell.default
+                    inputs.zen-browser.homeModules.default
+                    inputs.nix-flatpak.homeManagerModules.nix-flatpak
+                  ];
+                };
+            };
+          }
+        ];
       };
-      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-tree;
     };
+
+    formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-tree;
+  };
 }

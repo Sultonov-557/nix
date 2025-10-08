@@ -2,10 +2,10 @@
 
 {
   imports = [
-    ./keybindings.nix
-    ./monitors.nix
-    ./rules.nix
-    ./settings.nix
+    ../config/hyprland/keybindings.nix
+    ../config/hyprland/monitors.nix
+    ../config/hyprland/rules.nix
+    ../config/hyprland/settings.nix
   ];
 
   catppuccin = {
