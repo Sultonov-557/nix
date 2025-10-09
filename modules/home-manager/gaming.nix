@@ -9,4 +9,8 @@
     ];
   };
 
+  home.packages = with pkgs; [
+    flatpak
+  ];
+
 }

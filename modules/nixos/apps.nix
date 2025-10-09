@@ -16,21 +16,11 @@
   };
 
   environment.systemPackages = with pkgs; [
+    pulseaudio
     nixfmt-rfc-style
     vim
     tuigreet
     nix-tree
-    hyprnome
-    yandex-music
-    telegram-desktop
-    discord
-    nautilus
-    gnome-disk-utility
-    kitty
     git
-    psmisc
-    gcc
-    lazygit
-    tree-sitter
   ];
 }

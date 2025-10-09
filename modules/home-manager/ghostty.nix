@@ -1,12 +1,22 @@
 { pkgs, lib, ... }@inputs:
 
 {
-  programs.kitty = {
+  programs.ghostty = {
     enable = true;
+    enableZshIntegration = true;
     settings = {
-      background_opacity = 0.5;
-      confirm_os_window_close = 0;
-      enable_audio_bell = false;
+      # Font
+      font-family = "JetBrainsMono Nerd Font"; # Nerd Font = icons + ligatures
+      font-size = 12;
+      bold-is-bright = true;
+
+      # Appearance
+      background-opacity = 0.9;
+      theme = "catppuccin-mocha"; # built-in scheme
+
+      # Window
+      window-padding-x = 8;
+      window-padding-y = 8;
     };
   };
 
@@ -20,6 +30,8 @@
     just
     process-compose
     xh
+    usbutils
+    alsa-utils
     progress
     noti
     topgrade
@@ -37,7 +49,6 @@
     yazi
     cava
     figlet
-
     wget
     curl
     bat

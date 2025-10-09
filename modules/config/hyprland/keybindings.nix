@@ -19,7 +19,7 @@
     bind = [
       "$mod, Space, exec, dms ipc call spotlight toggle"
       "$mod, V, exec, dms ipc call clipboard toggle"
-      "$mod, Return, exec, kitty" # launch terminal
+      "$mod, Return, exec, ghostty"
       "$mod, W, exec, zen"
       "$mod, E, exec, nautilus"
       "$mod, M, exec, yandex-music"
