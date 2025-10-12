@@ -11,22 +11,21 @@
   catppuccin = {
     enable = true;
     flavor = "mocha";
-    accent = "red";
+    accent = "blue";
 
     starship.enable = true;
-    kitty.enable = true;
+    ghostty.enable = true;
     nvim.enable = true;
+    hyprland.enable = true;
+    kvantum.enable = true;
+    kvantum.apply = true;
+    vesktop.enable = true;
     rofi.enable = true;
     lazygit.enable = true;
   };
 
   nixpkgs.config.packageOverrides = pkgs: {
-    colloid-icon-theme = pkgs.colloid-icon-theme.override { colorVariants = [ "red" ]; };
-    catppuccin-gtk = pkgs.catppuccin-gtk.override {
-      accents = [ "red" ];
-      size = "standard";
-      variant = "mocha";
-    };
+    colloid-icon-theme = pkgs.colloid-icon-theme.override { colorVariants = [ "blue" ]; };
     discord = pkgs.discord.override {
       withOpenASAR = true;
       withTTS = true;

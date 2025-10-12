@@ -45,6 +45,9 @@
     options = [
       "x-systemd.automount"
       "nofail"
+      "uid=1000"
+      "gid=100"
+      "umask=0022"
     ];
   };
 
