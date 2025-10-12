@@ -25,10 +25,12 @@
       "$mod, M, exec, yandex-music"
       "$mod, T, exec, Telegram"
       "$mod, D, exec, vesktop"
-      "$mod, G, exec, steam"
+      "$mod, G, exec, lutris"
       "$mod, L, exec, dms ipc call lock lock" # lock screen
       "$mod, Q, killactive" # killactive
       "$mod, F, togglefloating"
+      "$mod SHIFT, F, fullscreen"
+
     ]
     ++ (builtins.concatLists (
       builtins.genList (
