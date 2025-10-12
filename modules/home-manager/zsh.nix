@@ -20,7 +20,6 @@
 
       plugins = [
         "git"
-        "z"
         "sudo"
         "history-substring-search"
         "colored-man-pages"
