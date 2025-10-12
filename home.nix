@@ -13,7 +13,8 @@
     hyprnome
     yandex-music
     telegram-desktop
-    discord
+    vencord
+    vesktop
     nautilus
     gnome-disk-utility
     psmisc
