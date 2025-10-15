@@ -2,11 +2,17 @@
 
 {
   services.xserver.enable = true;
-  services.displayManager.gdm.enable = true;
+  services.displayManager.gdm = {
+    enable = true;
+  };
+
+  environment.etc."gdm/background.png".source = ../../wallpaper.png;
 
   services.upower.enable = true;
   services.devmon.enable = true;
   services.udisks2.enable = true;
+  #services.cliphist.enable = true;
+  #services.cliphist.allowImages = true;
 
   services.postgresql = {
     enable = false;

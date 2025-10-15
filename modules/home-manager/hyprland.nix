@@ -41,6 +41,7 @@
   home.packages = with pkgs; [
     wlsunset
     brightnessctl
+    wl-clipboard
     cliphist
     numix-icon-theme-circle
     colloid-icon-theme

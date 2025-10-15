@@ -1,11 +1,11 @@
 { pkgs, ... }:
 
 {
-
   services.flatpak = {
     enable = true;
     packages = [
       "app.xmcl.voxelum"
+      "io.mrarm.mcpelauncher"
     ];
   };
 
@@ -13,7 +13,6 @@
     flatpak
     wineWowPackages.stable
     winetricks
-    bottles
     lutris
     dxvk
     vkd3d

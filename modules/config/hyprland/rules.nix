@@ -9,6 +9,10 @@
       "float,title:^(Save File)$"
       "float,title:^(Authentication)$"
       "float,title:^(branchdialog)$"
+      "float,title:Picture in Picture"
+      "pin,title:Picture in picture"
+      "float,title:Picture-in-Picture"
+      "pin,title:Picture-in-picture"
 
       # Set opacity for some applications
       "opacity 0.8,class:^(kitty)$"
@@ -17,4 +21,3 @@
     ];
   };
 }
-

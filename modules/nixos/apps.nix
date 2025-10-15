@@ -19,7 +19,8 @@
     pulseaudio
     nixfmt-rfc-style
     vim
-    tuigreet
+    catppuccin-gtk
+    gdm-settings
     nix-tree
     git
   ];
