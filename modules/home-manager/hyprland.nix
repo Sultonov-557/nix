@@ -19,7 +19,6 @@
     hyprland.enable = true;
     kvantum.enable = true;
     kvantum.apply = true;
-    vesktop.enable = true;
     rofi.enable = true;
     lazygit.enable = true;
   };
