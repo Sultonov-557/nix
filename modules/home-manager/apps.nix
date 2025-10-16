@@ -14,5 +14,6 @@
     nautilus
     gnome-disk-utility
     gnome-system-monitor
+    p7zip
   ];
 }

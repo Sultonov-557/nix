@@ -9,12 +9,11 @@
     };
   };
 
-  hardware.graphics.enable = true;
   hardware.uinput.enable = true;
 
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    driSupport32Bit = true;
+    enable32Bit = true;
   };
 
   # Audio
