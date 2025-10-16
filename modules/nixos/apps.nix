@@ -20,7 +20,6 @@
     nixfmt-rfc-style
     vim
     catppuccin-gtk
-    gdm-settings
     nix-tree
     git
   ];
