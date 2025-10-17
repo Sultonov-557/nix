@@ -9,55 +9,74 @@
       font-family = "JetBrainsMono Nerd Font"; # Nerd Font = icons + ligatures
       font-size = 12;
       bold-is-bright = true;
+      ligatures = true;
 
       # Appearance
       background-opacity = 0.9;
       theme = "catppuccin-mocha"; # built-in scheme
+      cursor-style = "underline";
+      cursor-blink = true;
+      confirm-close = false;
+      hide-title-bar = true;
 
       # Window
       window-padding-x = 8;
       window-padding-y = 8;
+      window-decoration = "none";
+      remember-window-size = true;
+
+      # ⚡ Performance
+      gpu = true;
+      scrollback-lines = 50000;
+      use-system-cursor = false;
     };
   };
 
   home.packages = with pkgs; [
-    file
-    license-generator
+    # Git & code tools
+    git
+    delta
     git-ignore
-    gitleaks
     git-secrets
+    gitleaks
     pass-git-helper
+    license-generator
+
+    # Productivity
     just
     process-compose
-    xh
-    usbutils
-    alsa-utils
-    progress
-    noti
     topgrade
-    ripgrep
-    rewrk
-    wrk2
-    procs
-    tealdeer
-    aria
-    fastfetch
-    macchina
-    sd
-    ouch
-    duf
-    yazi
-    cava
-    figlet
-    wget
+    noti
+
+    # Networking & HTTP
     curl
-    bat
+    wget
+    xh
+    aria
+
+    # File ops & search
     eza
-    fzf
-    ripgrep
     fd
+    ripgrep
+    bat
+    sd
+    duf
+    ouch
+    yazi
+    procs
+
+    # Monitoring
     btop
-    delta
-    zoxide
+    progress
+    cava
+
+    # Fun / utility
+    figlet
+    macchina
+    fastfetch
+
+    # Audio & USB utils
+    alsa-utils
+    usbutils
   ];
 }

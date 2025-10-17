@@ -15,6 +15,8 @@
     flake = "./.";
   };
 
+  environment.sessionVariables.PATH = [ "$HOME/.cache/.bun/bin" ];
+
   environment.systemPackages = with pkgs; [
     pulseaudio
     nixfmt-rfc-style
@@ -23,5 +25,8 @@
     nix-tree
     git
     playerctl
+    nodePackages_latest.nodejs
+    bun
+
   ];
 }
