@@ -3,6 +3,7 @@
 {
   programs.zsh = {
     enable = true;
+    dotDir = "/home/sultonov/.config/zsh";
     syntaxHighlighting.enable = true;
     enableCompletion = true;
 
@@ -23,7 +24,9 @@
       du = "du -h";
     };
 
-    initExtra = ''
+    initContent = ''
+      source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
+
       if [[ -r "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k-instant-prompt.zsh" ]]; then
         source "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k-instant-prompt.zsh"
       fi
@@ -31,12 +34,11 @@
       source ${../config/p10k/p10k.zsh}
 
       POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
-      fastfetch
     '';
 
     oh-my-zsh = {
       enable = true;
-      theme = "powerlevel10k/powerlevel10k";
+      theme = "";
 
       plugins = [
         "git"
