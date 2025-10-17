@@ -9,26 +9,17 @@
       font-family = "JetBrainsMono Nerd Font"; # Nerd Font = icons + ligatures
       font-size = 12;
       bold-is-bright = true;
-      ligatures = true;
 
       # Appearance
       background-opacity = 0.9;
       theme = "catppuccin-mocha"; # built-in scheme
       cursor-style = "underline";
-      cursor-blink = true;
-      confirm-close = false;
-      hide-title-bar = true;
+      confirm-close-surface = false;
 
       # Window
       window-padding-x = 8;
       window-padding-y = 8;
       window-decoration = "none";
-      remember-window-size = true;
-
-      # ⚡ Performance
-      gpu = true;
-      scrollback-lines = 50000;
-      use-system-cursor = false;
     };
   };
 

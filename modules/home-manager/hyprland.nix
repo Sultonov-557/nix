@@ -23,14 +23,6 @@
     lazygit.enable = true;
   };
 
-  nixpkgs.config.packageOverrides = pkgs: {
-    colloid-icon-theme = pkgs.colloid-icon-theme.override { colorVariants = [ "blue" ]; };
-    discord = pkgs.discord.override {
-      withOpenASAR = true;
-      withTTS = true;
-    };
-  };
-
   home.pointerCursor = {
     package = pkgs.catppuccin-cursors.mochaDark;
     name = "Bibata-Modern-Classic";
@@ -40,14 +32,26 @@
   home.packages = with pkgs; [
     wlsunset
     brightnessctl
+
     wl-clipboard
     cliphist
+
     numix-icon-theme-circle
     colloid-icon-theme
     catppuccin-gtk
     catppuccin-kvantum
     catppuccin-cursors.mochaDark
+
+    grim # screenshot tool
+    slurp # region selector
+    swappy # simple image editor/annotator
+    libnotify # for notifications
   ];
+
+  services.cliphist = {
+    enable = true;
+    allowImages = true;
+  };
 
   wayland.windowManager.hyprland = {
     enable = true;

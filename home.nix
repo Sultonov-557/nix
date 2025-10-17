@@ -6,24 +6,6 @@
 
   home.stateVersion = "25.05";
 
-  home.packages = with pkgs; [
-    gemini-cli
-    blueman
-    pavucontrol
-    hyprnome
-    yandex-music
-    telegram-desktop
-    vencord
-    vesktop
-    nautilus
-    gnome-disk-utility
-    psmisc
-    gcc
-    lazygit
-    tree-sitter
-  ];
-
-  # Set default applications to avoid pulling in firefox and vscode
   xdg.mimeApps = {
     enable = true;
     defaultApplications = {
@@ -39,7 +21,6 @@
   imports = [
     ./modules/home-manager/zsh.nix
     ./modules/home-manager/ghostty.nix
-    ./modules/home-manager/starship.nix
     ./modules/home-manager/git.nix
     ./modules/home-manager/zen-browser.nix
     ./modules/home-manager/gaming.nix

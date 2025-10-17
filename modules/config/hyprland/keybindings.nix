@@ -23,6 +23,7 @@
     ];
 
     bind = [
+      ", Print, exec, grim -g \"$(slurp)\" - | swappy -f -"
       "$mod, Space, exec, dms ipc call spotlight toggle"
       "$mod, V, exec, dms ipc call clipboard toggle"
       "$mod, Return, exec, ghostty"

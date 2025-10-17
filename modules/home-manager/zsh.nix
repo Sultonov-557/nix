@@ -24,23 +24,18 @@
     };
 
     initContent = ''
-        if [[ $- == *i* ]]; then
-          fastfetch
-        fi
-
       # Powerlevel10k instant prompt (massively speeds up startup)
-        if [[ -r "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k-instant-prompt.zsh" ]]; then
-          source "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k-instant-prompt.zsh"
-        fi
+      if [[ -r "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k-instant-prompt.zsh" ]]; then
+        source "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k-instant-prompt.zsh"
+      fi
 
-        source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
+      source ${../config/p10k/p10k.zsh}
 
-        POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+      POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
     '';
 
     oh-my-zsh = {
       enable = true;
-      theme = "powerlevel10k/powerlevel10k";
 
       plugins = [
         "git"
