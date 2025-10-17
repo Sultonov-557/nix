@@ -174,10 +174,10 @@
   "osdAlwaysShowValue": false,
   "screenPreferences": {
     "topBar": [
-      "DP-1"
+      "all"
     ],
     "dankBar": [
-      "DP-1"
+      "all"
     ],
     "dock": [
       "all"

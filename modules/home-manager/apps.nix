@@ -10,6 +10,7 @@
     baobab
     unityhub
     telegram-desktop
+    beekeeper-studio
     discord
     nautilus
     gnome-disk-utility

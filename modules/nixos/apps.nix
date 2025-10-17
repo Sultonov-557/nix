@@ -22,5 +22,6 @@
     catppuccin-gtk
     nix-tree
     git
+    playerctl
   ];
 }

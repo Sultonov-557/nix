@@ -5,7 +5,6 @@
     enable = true;
     packages = [
       "app.xmcl.voxelum"
-      "io.mrarm.mcpelauncher"
     ];
   };
 

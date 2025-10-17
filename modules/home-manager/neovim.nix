@@ -10,6 +10,10 @@
     bun
   ];
 
+  home.activation.installBunGlobals = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    ${pkgs.bun}/bin/bun install -g drizzle-kit
+  '';
+
   programs.neovim = {
     enable = true;
     defaultEditor = true;

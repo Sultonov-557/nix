@@ -13,6 +13,9 @@
   nixpkgs.config = {
     allowUnfree = true;
     separateDebugInfo = false;
+    permittedInsecurePackages = [
+      "beekeeper-studio-5.3.4"
+    ];
   };
   nix.settings.keep-outputs = false;
   nix.settings.keep-derivations = false;

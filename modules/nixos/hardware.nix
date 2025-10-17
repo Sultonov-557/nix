@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   services.xserver = {
@@ -16,6 +16,8 @@
     enable32Bit = true;
   };
 
+  hardware.enableAllFirmware = true;
+
   # Audio
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -29,5 +31,10 @@
 
   # Bluetooth
   services.blueman.enable = true;
-  hardware.bluetooth.enable = true;
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+  };
+
+  hardware.firmware = [ pkgs.linux-firmware ];
 }

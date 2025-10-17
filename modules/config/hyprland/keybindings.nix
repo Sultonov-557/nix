@@ -9,6 +9,11 @@
       ", XF86AudioMicMute, exec, dms ipc call audio micmute"
       ", XF86MonBrightnessUp, exec, dms ipc call brightness increment 5 \""
       ", XF86MonBrightnessDown, exec, dms ipc call brightness decrement 5 \""
+
+      ", XF86AudioPlay, exec, playerctl play-pause"
+      ", XF86AudioNext, exec, playerctl next"
+      ", XF86AudioPrev, exec, playerctl previous"
+      ", XF86AudioStop, exec, playerctl stop"
     ];
 
     bindm = [
