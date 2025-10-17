@@ -23,8 +23,7 @@
       du = "du -h";
     };
 
-    initContent = ''
-      # Powerlevel10k instant prompt (massively speeds up startup)
+    initExtra = ''
       if [[ -r "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k-instant-prompt.zsh" ]]; then
         source "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k-instant-prompt.zsh"
       fi
@@ -32,10 +31,12 @@
       source ${../config/p10k/p10k.zsh}
 
       POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+      fastfetch
     '';
 
     oh-my-zsh = {
       enable = true;
+      theme = "powerlevel10k/powerlevel10k";
 
       plugins = [
         "git"

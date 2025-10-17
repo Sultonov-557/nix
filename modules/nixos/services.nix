@@ -26,5 +26,13 @@
     enable = true;
   };
 
+  virtualisation.docker = {
+    enable = true;
+
+    enableOnBoot = true;
+
+    rootless.enable = true;
+  };
+
   services.gvfs.enable = true;
 }

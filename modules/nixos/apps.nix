@@ -27,6 +27,6 @@
     playerctl
     nodePackages_latest.nodejs
     bun
-
+    docker
   ];
 }

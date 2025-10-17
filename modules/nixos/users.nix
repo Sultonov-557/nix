@@ -8,6 +8,7 @@
       "networkmanager"
       "wheel"
       "vboxsf"
+      "docker"
     ];
     shell = pkgs.zsh;
     packages = with pkgs; [ ];
