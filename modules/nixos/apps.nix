@@ -8,13 +8,6 @@
   programs.hyprland.enable = true;
   programs.zsh.enable = true;
 
-  programs.nh = {
-    enable = true;
-    clean.enable = true;
-    clean.extraArgs = "--keep-since 4d --keep 3";
-    flake = "./.";
-  };
-
   environment.sessionVariables.PATH = [ "$HOME/.cache/.bun/bin" ];
 
   environment.systemPackages = with pkgs; [
@@ -29,4 +22,15 @@
     bun
     docker
   ];
+
+  security.polkit.extraConfig = ''
+    polkit.addRule(function(action, subject) {
+      if (
+        action.id.indexOf("org.freedesktop.udisks2.") == 0 &&
+        subject.isInGroup("wheel")
+      ) {
+        return polkit.Result.AUTH_ADMIN_KEEP;
+      }
+    });
+  '';
 }

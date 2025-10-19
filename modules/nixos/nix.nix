@@ -9,6 +9,21 @@
     ];
   };
 
+  nix.settings.substituters = [
+    "https://cache.nixos.org/"
+    "https://hyprland.cachix.org"
+  ];
+  nix.settings.trusted-public-keys = [
+    "hyprland.cachix.org-1:ZFI3rT84a1xr0EJ4yqVRK6p+Kx2HuhVE3rVb9VQwC5k="
+  ];
+
+  programs.nh = {
+    enable = true;
+    clean.enable = true;
+    clean.extraArgs = "--keep-since 4d --keep 3";
+    flake = "./.";
+  };
+
   nix.settings.auto-optimise-store = true;
   nixpkgs.config = {
     allowUnfree = true;

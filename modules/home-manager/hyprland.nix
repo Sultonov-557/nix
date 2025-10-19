@@ -42,10 +42,10 @@
     catppuccin-kvantum
     catppuccin-cursors.mochaDark
 
-    grim # screenshot tool
-    slurp # region selector
-    swappy # simple image editor/annotator
-    libnotify # for notifications
+    grim
+    slurp
+    swappy
+    libnotify
   ];
 
   services.cliphist = {

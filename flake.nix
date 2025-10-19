@@ -15,7 +15,7 @@
     };
     split-monitor-workspaces = {
       url = "github:Duckonaut/split-monitor-workspaces";
-      inputs.hyprland.follows = "hyprland"; # <- make sure this line is present for the plugin to work as intended
+      inputs.hyprland.follows = "hyprland";
     };
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     zen-browser.inputs.nixpkgs.follows = "nixpkgs";
@@ -23,37 +23,46 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
-    nixosConfigurations = {
-      nixos = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./configuration.nix
-          home-manager.nixosModules.home-manager
-          {
-            home-manager = {
-              backupFileExtension = "backup";
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              users.sultonov = { pkgs, ... }:
-                {
-                  imports = [
-                    (import ./home.nix {
-                      inherit pkgs inputs;
-                    })
-                    inputs.catppuccin.homeModules.catppuccin
-                    inputs.dankMaterialShell.homeModules.dankMaterialShell.default
-                    inputs.zen-browser.homeModules.default
-                    inputs.nix-flatpak.homeManagerModules.nix-flatpak
-                  ];
-                };
-            };
-          }
-        ];
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      ...
+    }@inputs:
+    {
+      nixosConfigurations = {
+        nixos = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./configuration.nix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                backupFileExtension = "backup";
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.sultonov =
+                  { pkgs, ... }:
+                  {
+                    imports = [
+                      (import ./home.nix {
+                        inherit pkgs inputs;
+                      })
+                      inputs.catppuccin.homeModules.catppuccin
+                      inputs.dankMaterialShell.homeModules.dankMaterialShell.default
+                      inputs.zen-browser.homeModules.default
+                      inputs.nix-flatpak.homeManagerModules.nix-flatpak
+                    ];
+                  };
+              };
+            }
+          ];
+        };
       };
-    };
 
-    formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-tree;
-  };
+      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-tree;
+    };
 }
+

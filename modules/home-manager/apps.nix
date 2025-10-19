@@ -7,13 +7,12 @@
     hyprnome
     yandex-music
     vencord
-    zoom-us
     pixelorama
     blender
     gimp
     qbittorrent-enhanced
     baobab
-    unityhub
+    godot
     telegram-desktop
     beekeeper-studio
     discord
@@ -21,5 +20,6 @@
     gnome-disk-utility
     gnome-system-monitor
     p7zip
+    lxqt.lxqt-policykit
   ];
 }
