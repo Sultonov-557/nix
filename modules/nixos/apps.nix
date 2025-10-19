@@ -7,11 +7,11 @@
   programs.steam.enable = true;
   programs.hyprland.enable = true;
   programs.zsh.enable = true;
+  programs.kdeconnect.enable = true;
 
   environment.sessionVariables.PATH = [ "$HOME/.cache/.bun/bin" ];
 
   environment.systemPackages = with pkgs; [
-    pulseaudio
     nixfmt-rfc-style
     vim
     catppuccin-gtk

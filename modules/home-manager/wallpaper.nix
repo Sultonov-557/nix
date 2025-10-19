@@ -6,11 +6,11 @@
       splash = false;
       splash_offset = 2.0;
 
-      preload = [ "~/nixos/wallpaper.png" ];
+      preload = [ "${../../wallpaper.png}" ];
 
       wallpaper = [
-        "DP-1,~/nixos/wallpaper.png"
-        "HDMI-A-1,~/nixos/wallpaper.png"
+        "DP-1, ${../../wallpaper.png}"
+        "HDMI-A-1, ${../../wallpaper.png}"
       ];
     };
   };

@@ -22,4 +22,10 @@
     p7zip
     lxqt.lxqt-policykit
   ];
+
+  services.kdeconnect = {
+    enable = true;
+    indicator = true;
+  };
+
 }
