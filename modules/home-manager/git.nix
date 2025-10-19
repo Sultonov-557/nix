@@ -8,6 +8,9 @@
     extraConfig = {
       init.defaultBranch = "main";
       pull.rebase = false;
+      safe.directory = [
+        "*"
+      ];
     };
   };
 
