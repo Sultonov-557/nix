@@ -41,6 +41,7 @@
 
   services.redis.servers."redis" = {
     enable = true;
+    port = 6379;
   };
 
   virtualisation.docker = {
