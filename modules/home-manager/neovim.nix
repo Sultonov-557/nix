@@ -15,7 +15,7 @@
   ];
 
   home.activation.installBunGlobals = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-    ${pkgs.bun}/bin/bun install -g drizzle-kit
+    ${pkgs.bun}/bin/bun install -g drizzle-kit typescript eslint prettier
   '';
 
   programs.neovim = {
