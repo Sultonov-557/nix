@@ -15,7 +15,7 @@
     let
       value =
         let
-          zen-browser = inputs.zen-browser.packages.${pkgs.system}.beta; # or twilight
+          zen-browser = inputs.zen-browser.packages.${pkgs.system}.default;
         in
         zen-browser.meta.desktopFileName;
 
