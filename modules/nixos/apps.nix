@@ -25,8 +25,8 @@
     nix-tree
     git
     playerctl
+    docker
     nodePackages_latest.nodejs
     bun
-    docker
   ];
 }

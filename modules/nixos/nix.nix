@@ -1,4 +1,9 @@
-{ lib, config, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 
 {
 
@@ -8,6 +13,13 @@
       "${config.users.users.sultonov.home}/.local/share/flatpak/exports/share"
     ];
   };
+
+  programs.nix-ld.enable = true;
+
+  programs.nix-ld.libraries = with pkgs; [
+    nodePackages_latest.nodejs
+    bun
+  ];
 
   nix.settings.auto-optimise-store = true;
   nixpkgs.config = {

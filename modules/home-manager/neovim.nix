@@ -11,6 +11,7 @@
     lazygit
     lazydocker
     tree-sitter
+    cargo
   ];
 
   home.activation.installBunGlobals = lib.hm.dag.entryAfter [ "writeBoundary" ] ''

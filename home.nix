@@ -22,7 +22,7 @@
     ./modules/home-manager/zsh.nix
     ./modules/home-manager/ghostty.nix
     ./modules/home-manager/git.nix
-    ./modules/home-manager/zen-browser.nix
+    (import ./modules/home-manager/zen-browser.nix { inherit pkgs inputs; })
     ./modules/home-manager/gaming.nix
     ./modules/home-manager/apps.nix
     (import ./modules/home-manager/hyprland.nix { inherit pkgs inputs; })
