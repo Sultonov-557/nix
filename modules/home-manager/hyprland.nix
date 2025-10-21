@@ -8,27 +8,6 @@
     ../config/hyprland/settings.nix
   ];
 
-  catppuccin = {
-    enable = true;
-    flavor = "mocha";
-    accent = "blue";
-
-    starship.enable = true;
-    ghostty.enable = true;
-    nvim.enable = true;
-    hyprland.enable = true;
-    kvantum.enable = true;
-    kvantum.apply = true;
-    rofi.enable = true;
-    lazygit.enable = true;
-  };
-
-  home.pointerCursor = {
-    package = pkgs.catppuccin-cursors.mochaDark;
-    name = "Bibata-Modern-Classic";
-    size = 24;
-  };
-
   home.packages = with pkgs; [
     wlsunset
     brightnessctl

@@ -12,7 +12,6 @@
 
       # Appearance
       background-opacity = 0.9;
-      theme = "catppuccin-mocha"; # built-in scheme
       cursor-style = "underline";
       confirm-close-surface = false;
 

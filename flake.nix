@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs";
-    catppuccin.url = "github:catppuccin/nix";
+    stylix.url = "github:danth/stylix/release-25.05";
     hyprland.url = "github:hyprwm/Hyprland";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -51,7 +51,7 @@
                       (import ./home.nix {
                         inherit pkgs inputs;
                       })
-                      inputs.catppuccin.homeModules.catppuccin
+                      inputs.stylix.homeModules.stylix
                       inputs.dankMaterialShell.homeModules.dankMaterialShell.default
                       inputs.zen-browser.homeModules.default
                       inputs.nix-flatpak.homeManagerModules.nix-flatpak

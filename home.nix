@@ -11,6 +11,7 @@
   };
 
   imports = [
+    (import ./modules/home-manager/stylix.nix { inherit pkgs inputs; })
     ./modules/home-manager/zsh.nix
     ./modules/home-manager/ghostty.nix
     ./modules/home-manager/git.nix
