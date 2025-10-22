@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs";
     stylix.url = "github:danth/stylix/release-25.05";
+    stylix.inputs.nixpkgs.follows = "nixpkgs";
     hyprland.url = "github:hyprwm/Hyprland";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -29,6 +30,7 @@
       self,
       nixpkgs,
       home-manager,
+      stylix,
       ...
     }@inputs:
     {
@@ -38,6 +40,7 @@
           specialArgs = { inherit inputs; };
           modules = [
             ./configuration.nix
+            stylix.nixosModules.stylix
             home-manager.nixosModules.home-manager
             {
               home-manager = {
