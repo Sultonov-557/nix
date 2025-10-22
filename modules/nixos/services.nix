@@ -23,7 +23,7 @@
   services.syncthing = {
     enable = true;
     user = "sultonov";
-    dataDir = "/home/sultonov/sync"; # Where to store synced files
+    dataDir = "/home/sultonov/sync";
     configDir = "/home/sultonov/.config/syncthing";
   };
 

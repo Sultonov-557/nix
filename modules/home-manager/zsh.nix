@@ -54,10 +54,10 @@
   programs.zoxide = {
     enable = true;
     enableZshIntegration = true;
+    flags = [ "--cmd cd" ];
   };
 
   home.packages = with pkgs; [
     zsh-powerlevel10k
-    fastfetch
   ];
 }
