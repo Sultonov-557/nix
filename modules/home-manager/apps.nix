@@ -14,6 +14,7 @@
     baobab
     godot
     telegram-desktop
+    podman-desktop
     beekeeper-studio
     discord
     nautilus

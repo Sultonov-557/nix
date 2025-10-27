@@ -14,6 +14,7 @@
     };
 
     shellAliases = {
+      docker = "podman";
       ls = "eza -a";
       cd = "z";
       ".." = "cd ..";
@@ -54,7 +55,6 @@
   programs.zoxide = {
     enable = true;
     enableZshIntegration = true;
-    flags = [ "--cmd cd" ];
   };
 
   home.packages = with pkgs; [

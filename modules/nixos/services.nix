@@ -27,6 +27,14 @@
     configDir = "/home/sultonov/.config/syncthing";
   };
 
+  virtualisation = {
+    containers.enable = true;
+    docker.rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
+  };
+
   services.postgresql = {
     enable = true;
     ensureDatabases = [ "postgres" ];
@@ -42,14 +50,6 @@
   services.redis.servers."redis" = {
     enable = true;
     port = 6379;
-  };
-
-  virtualisation.docker = {
-    enable = true;
-
-    enableOnBoot = true;
-
-    rootless.enable = true;
   };
 
 }
