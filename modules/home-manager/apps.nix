@@ -15,7 +15,7 @@
     godot
     telegram-desktop
     podman-desktop
-    beekeeper-studio
+    dbeaver-bin
     discord
     nautilus
     gnome-disk-utility
