@@ -35,6 +35,7 @@
       source ${../config/p10k/p10k.zsh}
 
       POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+      export _ZO_EXACT=1
     '';
 
     oh-my-zsh = {
@@ -43,7 +44,6 @@
 
       plugins = [
         "git"
-        "z"
         "sudo"
         "history-substring-search"
         "colored-man-pages"
@@ -55,6 +55,22 @@
   programs.zoxide = {
     enable = true;
     enableZshIntegration = true;
+  };
+
+  programs.zellij = {
+    enable = true;
+  };
+  xdg.configFile."zellij/config.kdl".source = ../config/zellij/config.kdl;
+
+  programs.atuin = {
+    enable = true;
+    enableZshIntegration = true;
+    settings = {
+      auto_sync = true;
+      sync_frequency = "10m";
+      search_mode = "fuzzy";
+      enter_accept = true;
+    };
   };
 
   home.packages = with pkgs; [

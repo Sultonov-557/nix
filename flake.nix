@@ -22,6 +22,9 @@
     zen-browser.inputs.nixpkgs.follows = "nixpkgs";
     zen-browser.inputs.home-manager.follows = "home-manager";
 
+    nixcord.url = "github:kaylorben/nixcord";
+    vicinae.url = "github:vicinaehq/vicinae";
+
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
@@ -57,6 +60,8 @@
                       inputs.stylix.homeModules.stylix
                       inputs.dankMaterialShell.homeModules.dankMaterialShell.default
                       inputs.zen-browser.homeModules.default
+                      inputs.nixcord.homeModules.nixcord
+                      inputs.vicinae.homeManagerModules.default
                       inputs.nix-flatpak.homeManagerModules.nix-flatpak
                     ];
                   };

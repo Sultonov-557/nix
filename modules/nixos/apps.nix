@@ -13,6 +13,7 @@
 
   environment.systemPackages = with pkgs; [
     nixfmt-rfc-style
+    deadnix
     vim
     catppuccin-gtk
     nix-tree

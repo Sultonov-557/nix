@@ -1,0 +1,14 @@
+default_mode "locked"
+
+keybinds {
+  locked {
+    bind "Ctrl" "Shift" "Left" {
+      action "GoToPreviousTab"
+    }
+    bind "Ctrl" "Shift" "Right" {
+      action "GoToNextTab"
+    }
+  }
+}
+
+theme "catppuccin-mocha"

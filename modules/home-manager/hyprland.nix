@@ -8,6 +8,11 @@
     ../config/hyprland/settings.nix
   ];
 
+  services.cliphist = {
+    enable = true;
+    allowImages = true;
+  };
+
   home.packages = with pkgs; [
     wlsunset
     brightnessctl
@@ -25,12 +30,9 @@
     slurp
     swappy
     libnotify
-  ];
 
-  services.cliphist = {
-    enable = true;
-    allowImages = true;
-  };
+    wdisplays
+  ];
 
   wayland.windowManager.hyprland = {
     enable = true;

@@ -8,11 +8,12 @@
 
   environment.etc."gdm/background.png".source = ../../wallpaper.png;
 
-  services.upower.enable = true;
-  services.devmon.enable = true;
-  services.udisks2.enable = true;
-  services.gvfs.enable = true;
-  security.polkit.enable = true;
+  services = {
+    upower.enable = true;
+    devmon.enable = true;
+    udisks2.enable = true;
+    gvfs.enable = true;
+  };
 
   systemd.user.services.polkit-agent = {
     description = "Polkit authentication agent";
@@ -52,6 +53,26 @@
   services.redis.servers."redis" = {
     enable = true;
     port = 6379;
+  };
+
+  security = {
+    rtkit.enable = true;
+    pam.services = {
+      astal-auth = { };
+      greetd = {
+        gnupg.enable = true;
+        enableGnomeKeyring = true;
+      };
+      login = {
+        enableGnomeKeyring = true;
+        gnupg = {
+          enable = true;
+          noAutostart = true;
+          storeOnly = true;
+        };
+      };
+    };
+    polkit.enable = true;
   };
 
 }
