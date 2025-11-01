@@ -59,7 +59,7 @@
                       })
                       inputs.stylix.homeModules.stylix
                       inputs.dankMaterialShell.homeModules.dankMaterialShell.default
-                      inputs.zen-browser.homeModules.default
+                      inputs.zen-browser.homeModules.beta
                       inputs.nixcord.homeModules.nixcord
                       inputs.vicinae.homeManagerModules.default
                       inputs.nix-flatpak.homeManagerModules.nix-flatpak
