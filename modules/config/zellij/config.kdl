@@ -1,6 +1,7 @@
 default_mode "locked"
 
 show_startup_tips false
+pane_frames false
 
 keybinds {
   locked {
