@@ -6,6 +6,7 @@
     dotDir = "/home/sultonov/.config/zsh";
     syntaxHighlighting.enable = true;
     enableCompletion = true;
+    enableAutosuggestions = true;
 
     history = {
       save = 10000;
@@ -36,7 +37,6 @@
 
       POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
       export _ZO_EXACT=1
-      zellij
     '';
 
     oh-my-zsh = {
@@ -47,7 +47,6 @@
         "git"
         "aliases"
         "bun"
-        "zsh-autosuggestions"
         "sudo"
         "history-substring-search"
         "colored-man-pages"
@@ -63,6 +62,7 @@
 
   programs.zellij = {
     enable = true;
+    enableZshIntegration = true;
   };
   xdg.configFile."zellij/config.kdl".source = ../config/zellij/config.kdl;
 

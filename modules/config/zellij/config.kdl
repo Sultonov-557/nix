@@ -1,5 +1,7 @@
 default_mode "locked"
 
+show_startup_tips false
+
 keybinds {
   locked {
     bind "Ctrl Shift Left" {
@@ -15,13 +17,6 @@ keybinds {
 
     bind "Ctrl Shift W" {
       CloseTab;
-    }
-
-    bind "Ctrl Shift PageUp" {
-      MoveTabLeft;
-    }
-    bind "Ctrl Shift PageDown" {
-      MoveTabRight;
     }
 
     bind "Alt 1" { GoToTab 1; }

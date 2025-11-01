@@ -4,8 +4,15 @@
   programs.ghostty = {
     enable = true;
     enableZshIntegration = true;
-    clearDefaultKeybinds = true;
     settings = {
+      command = "zellij";
+      keybind = [
+        "ctrl+shift+t=unbind"
+        "ctrl+shift+w=unbind"
+        "ctrl+shift+left=unbind"
+        "ctrl+shift+right=unbind"
+      ];
+
       # Font
       font-family = "JetBrainsMono Nerd Font"; # Nerd Font = icons + ligatures
       font-size = 12;
