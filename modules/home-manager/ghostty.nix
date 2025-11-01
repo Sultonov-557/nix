@@ -4,6 +4,7 @@
   programs.ghostty = {
     enable = true;
     enableZshIntegration = true;
+    clearDefaultKeybinds = true;
     settings = {
       # Font
       font-family = "JetBrainsMono Nerd Font"; # Nerd Font = icons + ligatures

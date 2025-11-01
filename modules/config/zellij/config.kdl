@@ -2,12 +2,32 @@ default_mode "locked"
 
 keybinds {
   locked {
-    bind "Ctrl" "Shift" "Left" {
-      action "GoToPreviousTab"
+    bind "Ctrl Shift Left" {
+      GoToPreviousTab;
     }
-    bind "Ctrl" "Shift" "Right" {
-      action "GoToNextTab"
+    bind "Ctrl Shift Right" {
+      GoToNextTab;
     }
+
+    bind "Ctrl Shift T" {
+      NewTab;
+    }
+
+    bind "Ctrl Shift W" {
+      CloseTab;
+    }
+
+    bind "Ctrl Shift PageUp" {
+      MoveTabLeft;
+    }
+    bind "Ctrl Shift PageDown" {
+      MoveTabRight;
+    }
+
+    bind "Alt 1" { GoToTab 1; }
+    bind "Alt 2" { GoToTab 2; }
+    bind "Alt 3" { GoToTab 3; }
+    bind "Alt 4" { GoToTab 4; }
   }
 }
 

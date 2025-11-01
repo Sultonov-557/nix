@@ -36,6 +36,7 @@
 
       POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
       export _ZO_EXACT=1
+      zellij
     '';
 
     oh-my-zsh = {
@@ -44,6 +45,9 @@
 
       plugins = [
         "git"
+        "aliases"
+        "bun"
+        "zsh-autosuggestions"
         "sudo"
         "history-substring-search"
         "colored-man-pages"
@@ -69,7 +73,6 @@
       auto_sync = true;
       sync_frequency = "10m";
       search_mode = "fuzzy";
-      enter_accept = true;
     };
   };
 
