@@ -30,8 +30,6 @@
     slurp
     swappy
     libnotify
-
-    wdisplays
   ];
 
   wayland.windowManager.hyprland = {

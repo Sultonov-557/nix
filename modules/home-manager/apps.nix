@@ -15,6 +15,7 @@
     telegram-desktop
     podman-desktop
     dbeaver-bin
+    ghostty
     nautilus
     gnome-disk-utility
     gnome-system-monitor
@@ -23,8 +24,6 @@
   ];
 
   services = {
-    kanshi.enable = true;
-
     kdeconnect = {
       enable = true;
       indicator = true;
