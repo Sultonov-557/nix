@@ -29,8 +29,6 @@
   };
 
   virtualisation = {
-    waydroid.enable = true;
-
     containers.enable = true;
     docker.rootless = {
       enable = true;
