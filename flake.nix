@@ -49,13 +49,14 @@
                 backupFileExtension = "backup";
                 useGlobalPkgs = true;
                 useUserPackages = true;
+                extraSpecialArgs = {
+                  inherit inputs;
+                };
                 users.sultonov =
                   { pkgs, ... }:
                   {
                     imports = [
-                      (import ./home.nix {
-                        inherit pkgs inputs;
-                      })
+                      ./home.nix
                       inputs.stylix.homeModules.stylix
                       inputs.dankMaterialShell.homeModules.dankMaterialShell.default
                       inputs.zen-browser.homeModules.beta
