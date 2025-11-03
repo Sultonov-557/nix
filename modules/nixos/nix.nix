@@ -43,7 +43,7 @@
     allowUnfree = true;
     separateDebugInfo = false;
     permittedInsecurePackages = [
-      "beekeeper-studio-5.3.4"
+      "mbedtls-2.28.10"
     ];
   };
   nix.settings.keep-outputs = false;
