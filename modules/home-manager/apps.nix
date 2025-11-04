@@ -6,12 +6,9 @@
     pavucontrol
     hyprnome
     yandex-music
-    pixelorama
-    blender
     gimp
     qbittorrent-enhanced
     baobab
-    godot
     telegram-desktop
     podman-desktop
     dbeaver-bin

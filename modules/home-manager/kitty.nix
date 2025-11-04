@@ -38,7 +38,7 @@
     curl
     wget
     xh
-    aria
+    aria2
 
     # File ops & search
     eza

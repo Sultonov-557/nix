@@ -3,9 +3,9 @@
 {
   programs.git = {
     enable = true;
-    userName = "Sultonov-557";
-    userEmail = "sultonovzerifboy@gmail.com";
-    extraConfig = {
+    settings = {
+      user.name = "Sultonov-557";
+      user.email = "sultonovzerifboy@gmail.com";
       init.defaultBranch = "main";
       pull.rebase = false;
       safe.directory = [

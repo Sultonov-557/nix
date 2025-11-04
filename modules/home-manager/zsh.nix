@@ -6,7 +6,7 @@
     dotDir = "/home/sultonov/.config/zsh";
     syntaxHighlighting.enable = true;
     enableCompletion = true;
-    enableAutosuggestions = true;
+    autosuggestion.enable = true;
 
     history = {
       save = 10000;
