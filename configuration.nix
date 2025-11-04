@@ -13,6 +13,7 @@
     ./modules/nixos/network.nix
     ./modules/nixos/nix.nix
     ./modules/nixos/nvidia.nix
+    ./modules/nixos/stylix.nix
     ./modules/nixos/services.nix
     ./modules/nixos/users.nix
     ./modules/nixos/xdg.nix

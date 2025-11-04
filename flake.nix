@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs";
+    pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
     stylix.url = "github:danth/stylix";
     stylix.inputs.nixpkgs.follows = "nixpkgs";
     hyprland.url = "github:hyprwm/Hyprland";
@@ -35,10 +36,33 @@
       stylix,
       ...
     }@inputs:
+    let
+      system = "x86_64-linux";
+      pkgs = nixpkgs.legacyPackages.${system};
+      preCommit = inputs.pre-commit-hooks.lib.${system};
+      preCommitCheck = preCommit.run {
+        src = ./.;
+        hooks = {
+          nixfmt-rfc = {
+            enable = true;
+          };
+          deadnix = {
+            enable = true;
+          };
+
+          no-hw-commit = {
+            enable = true;
+            entry = "bash -c 'if git diff --cached --name-only | rg -x hardware-configuration.nix; then echo Error: hardware-configuration.nix is not allowed to be committed. >&2; exit 1; fi'";
+            language = "system";
+            pass_filenames = false;
+          };
+        };
+      };
+    in
     {
       nixosConfigurations = {
         nixos = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
+          system = system;
           specialArgs = { inherit inputs; };
           modules = [
             ./configuration.nix
@@ -57,7 +81,6 @@
                   {
                     imports = [
                       ./home.nix
-                      inputs.stylix.homeModules.stylix
                       inputs.dankMaterialShell.homeModules.dankMaterialShell.default
                       inputs.zen-browser.homeModules.beta
                       inputs.nixcord.homeModules.nixcord
@@ -70,6 +93,11 @@
         };
       };
 
-      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-tree;
+      checks.${system}.pre-commit = preCommitCheck;
+      devShells.${system}.default = pkgs.mkShell {
+        shellHook = preCommitCheck.shellHook;
+      };
+
+      formatter.${system} = pkgs.nixfmt-tree;
     };
 }

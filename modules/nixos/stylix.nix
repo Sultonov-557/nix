@@ -21,9 +21,5 @@ in
       size = 24;
     };
 
-    #wallpaper = {
-    #  image = "/path/to/your/current/wallpaper.png";
-    #  blend = 0.4; # blend theme colors into wallpaper
-    #};
   };
 }

@@ -42,9 +42,6 @@
   nixpkgs.config = {
     allowUnfree = true;
     separateDebugInfo = false;
-    permittedInsecurePackages = [
-      "mbedtls-2.28.10"
-    ];
   };
   nix.settings.keep-outputs = false;
   nix.settings.keep-derivations = false;
