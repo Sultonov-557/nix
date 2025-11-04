@@ -2,6 +2,7 @@
 {
   home.packages = with pkgs; [
     gemini-cli
+    cursor-cli
     blueman
     pavucontrol
     hyprnome
