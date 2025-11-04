@@ -15,6 +15,8 @@ in
 
     base16Scheme = "${base16Scheme}";
 
+    image = ../../wallpaper.png;
+
     cursor = {
       package = pkgs.catppuccin-cursors.mochaDark;
       name = "Bibata-Modern-Classic";
