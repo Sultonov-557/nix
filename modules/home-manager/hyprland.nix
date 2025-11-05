@@ -16,6 +16,7 @@
   home.packages = with pkgs; [
     wlsunset
     brightnessctl
+    pamixer
 
     wl-clipboard
     cliphist
