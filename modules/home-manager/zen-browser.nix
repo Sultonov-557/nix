@@ -9,6 +9,22 @@
   programs.zen-browser = {
     enable = true;
 
+    policies =
+      let
+        mkLockedAttrs = builtins.mapAttrs (
+          _: value: {
+            Value = value;
+            Status = "locked";
+          }
+        );
+      in
+      {
+        Preferences = mkLockedAttrs {
+          "browser.tabs.allow_transparent_browser" = true;
+          "zen.urlbar.replace-newtab" = false;
+        };
+      };
+
     extraPrefsFiles = [
       (builtins.fetchurl {
         url = "https://raw.githubusercontent.com/MrOtherGuy/fx-autoconfig/master/program/config.js";
