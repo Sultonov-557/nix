@@ -13,7 +13,9 @@
 
   environment.systemPackages = with pkgs; [
     nixfmt-rfc-style
+    openssl
     deadnix
+    podman-compose
     vim
     catppuccin-gtk
     nix-tree

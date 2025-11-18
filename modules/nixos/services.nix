@@ -30,9 +30,9 @@
 
   virtualisation = {
     containers.enable = true;
-    docker.rootless = {
+    podman = {
       enable = true;
-      setSocketVariable = true;
+      dockerCompat = true;
     };
   };
 

@@ -24,11 +24,9 @@
   nix.settings.substituters = [
     "https://cache.nixos.org/"
     "https://hyprland.cachix.org"
-    "https://vicinae.cachix.org"
   ];
   nix.settings.trusted-public-keys = [
     "hyprland.cachix.org-1:ZFI3rT84a1xr0EJ4yqVRK6p+Kx2HuhVE3rVb9VQwC5k="
-    "vicinae.cachix.org-1:1kDrfienkGHPYbkpNj1mWTr7Fm1+zcenzgTizIcI3oc="
   ];
 
   programs.nh = {

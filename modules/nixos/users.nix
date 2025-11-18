@@ -9,6 +9,7 @@
       "wheel"
       "vboxsf"
       "docker"
+      "podman"
     ];
     shell = pkgs.zsh;
     packages = with pkgs; [ ];
