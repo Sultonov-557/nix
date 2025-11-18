@@ -18,6 +18,7 @@
   imports = [
     ./modules/home-manager/zsh.nix
     ./modules/home-manager/kitty.nix
+    ./modules/home-manager/ghostty.nix
     ./modules/home-manager/git.nix
     (import ./modules/home-manager/zen-browser.nix { inherit pkgs lib inputs; })
     ./modules/home-manager/gaming.nix

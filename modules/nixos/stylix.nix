@@ -16,6 +16,12 @@ in
     base16Scheme = "${base16Scheme}";
 
     image = ../../wallpaper.png;
+    opacity = {
+      applications = 0.8;
+      desktop = 0.8;
+      terminal = 0.8;
+
+    };
 
     cursor = {
       package = pkgs.catppuccin-cursors.mochaDark;

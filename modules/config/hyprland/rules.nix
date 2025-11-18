@@ -13,11 +13,6 @@
       "pin,title:Picture in picture"
       "float,title:Picture-in-Picture"
       "pin,title:Picture-in-picture"
-
-      # Set opacity for some applications
-      "opacity 0.8,class:^(kitty)$"
-      "opacity 0.9,class:^(rofi)$"
-
     ];
   };
 }
