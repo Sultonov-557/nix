@@ -10,10 +10,17 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     dankMaterialShell = {
       url = "github:AvengeMedia/DankMaterialShell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     split-monitor-workspaces = {
       url = "github:Duckonaut/split-monitor-workspaces";
       inputs.hyprland.follows = "hyprland";
@@ -83,6 +90,7 @@
                     imports = [
                       ./home.nix
                       inputs.dankMaterialShell.homeModules.dankMaterialShell.default
+                      inputs.noctalia.homeModules.default
                       inputs.zen-browser.homeModules.beta
                       inputs.nixcord.homeModules.nixcord
                       inputs.nix-flatpak.homeManagerModules.nix-flatpak
