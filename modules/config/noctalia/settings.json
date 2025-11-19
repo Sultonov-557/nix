@@ -285,7 +285,7 @@
 		"videoSource": "portal"
 	},
 	"sessionMenu": {
-		"countdownDuration": 10000,
+		"countdownDuration": 5000,
 		"enableCountdown": true,
 		"position": "center",
 		"powerOptions": [
