@@ -27,6 +27,57 @@
       enable = true;
       indicator = true;
     };
+
+    udiskie = {
+      enable = true;
+      automount = true;
+      notify = true;
+      tray = "auto";
+    };
+
+    espanso = {
+      enable = true;
+      matches = {
+        base = {
+          matches = [
+            {
+              trigger = ":email";
+              replace = "sultonovzerifboy@gmail.com";
+            }
+            {
+              trigger = ":gh";
+              replace = "Sultonov-557";
+            }
+            {
+              trigger = ":date";
+              replace = "{{mydate}}";
+              vars = [
+                {
+                  name = "mydate";
+                  type = "date";
+                  params = {
+                    format = "%Y-%m-%d";
+                  };
+                }
+              ];
+            }
+            {
+              trigger = ":time";
+              replace = "{{mytime}}";
+              vars = [
+                {
+                  name = "mytime";
+                  type = "date";
+                  params = {
+                    format = "%H:%M:%S";
+                  };
+                }
+              ];
+            }
+          ];
+        };
+      };
+    };
   };
 
   programs.nixcord = {

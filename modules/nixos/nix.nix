@@ -25,11 +25,10 @@
     enable = true;
     clean.enable = true;
     clean.extraArgs = "--keep-since 4d --keep 3";
-    flake = /home/sultonov/nixos;
+    flake = "/home/sultonov/nixos";
   };
 
   nix.settings = {
-    flake = /home/sultonov/nixos;
     max-jobs = "auto";
     cores = 0;
     auto-optimise-store = true;
