@@ -76,6 +76,15 @@
     };
   };
 
+  programs.pay-respects = {
+    enable = true;
+    options = [
+      "--alias"
+      "f"
+    ];
+    enableZshIntegration = true;
+  };
+
   home.packages = with pkgs; [
     zsh-powerlevel10k
 
