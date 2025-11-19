@@ -34,7 +34,7 @@
       "$mod, T, exec, Telegram"
       "$mod, D, exec, discord"
       "$mod, G, exec, lutris"
-      "$mod, L, exec, noctalia-shell ipc call sessionMenu lock" # lock screen
+      "$mod, L, exec, noctalia-shell ipc call lockScreen lock" # lock screen
       "$mod, Q, killactive" # killactive
       "$mod, F, togglefloating"
       "$mod SHIFT, F, fullscreen"
