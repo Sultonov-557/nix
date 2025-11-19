@@ -2,7 +2,13 @@
 
 {
 
+  xdg.configFile."noctalia" = {
+    source = ../config/noctalia;
+    recursive = true;
+  };
+
   programs.noctalia-shell = {
-    enable = false;
+    enable = true;
+    systemd.enable = true;
   };
 }
