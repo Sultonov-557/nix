@@ -366,8 +366,8 @@
 		"tooltipsEnabled": true
 	},
 	"wallpaper": {
-		"defaultWallpaper": "/nix/store/qyldjkbb092gnhzvb66byg63ffmcs747-noctalia-shell-fef85353848c48b0694643e1edb155e51430d6de/share/noctalia-shell/Assets/Wallpaper/noctalia.png",
-		"directory": "/home/sultonov/Pictures/Wallpapers",
+		"defaultWallpaper": "/home/sultonov/nixos/wallpaper.png",
+		"directory": "/home/sultonov/nixos",
 		"enableMultiMonitorDirectories": false,
 		"enabled": true,
 		"fillColor": "#000000",
