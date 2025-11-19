@@ -2,6 +2,7 @@
 {
   home.packages = with pkgs; [
     gemini-cli
+    antigravity
     cursor-cli
     blueman
     pavucontrol
