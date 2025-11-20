@@ -4,6 +4,7 @@
     gemini-cli
     antigravity
     cursor-cli
+    bruno
     blueman
     pavucontrol
     hyprnome
