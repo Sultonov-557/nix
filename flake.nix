@@ -25,9 +25,17 @@
       url = "github:Duckonaut/split-monitor-workspaces";
       inputs.hyprland.follows = "hyprland";
     };
-    zen-browser.url = "github:0xc000022070/zen-browser-flake";
-    zen-browser.inputs.nixpkgs.follows = "nixpkgs";
-    zen-browser.inputs.home-manager.follows = "home-manager";
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        home-manager.follows = "home-manager";
+      };
+    };
+    zen-nebula = {
+      url = "github:JustAdumbPrsn/Nebula-A-Minimal-Theme-for-Zen-Browser/b1fabe759ad2cfc4b745158b163ead75b1247f15";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
 
@@ -92,6 +100,7 @@
                       inputs.dankMaterialShell.homeModules.dankMaterialShell.default
                       inputs.noctalia.homeModules.default
                       inputs.zen-browser.homeModules.beta
+                      inputs.zen-nebula.homeModules.default
                       inputs.nixcord.homeModules.nixcord
                       inputs.nix-flatpak.homeManagerModules.nix-flatpak
                     ];
