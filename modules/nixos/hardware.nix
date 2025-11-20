@@ -29,4 +29,6 @@
   };
 
   hardware.firmware = [ pkgs.linux-firmware ];
+
+  zramSwap.enable = true;
 }
