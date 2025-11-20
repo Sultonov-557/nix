@@ -19,7 +19,6 @@
   hardware.enableAllFirmware = true;
 
   # Audio
-  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
 
   # Bluetooth
