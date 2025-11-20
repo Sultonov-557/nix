@@ -29,7 +29,7 @@
       "$mod, V, exec, noctalia-shell ipc call launcher clipboard"
       "$mod, Return, exec, ghostty"
       "$mod, W, exec, zen"
-      "$mod, E, exec, nautilus"
+      "$mod, E, exec, dolphin"
       "$mod, M, exec, yandex-music"
       "$mod, T, exec, Telegram"
       "$mod, D, exec, discord"

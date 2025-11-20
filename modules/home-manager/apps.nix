@@ -15,7 +15,7 @@
     podman-desktop
     dbeaver-bin
     ghostty
-    nautilus
+    kdePackages.dolphin
     gnome-disk-utility
     gnome-system-monitor
     p7zip
