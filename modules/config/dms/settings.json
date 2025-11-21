@@ -1,187 +1,177 @@
 {
-  "currentThemeName": "cat-red",
-  "customThemeFile": "",
-  "matugenScheme": "scheme-tonal-spot",
-  "dankBarTransparency": 0,
-  "dankBarWidgetTransparency": 1,
-  "popupTransparency": 1,
-  "dockTransparency": 1,
-  "use24HourClock": true,
-  "useFahrenheit": false,
-  "nightModeEnabled": false,
-  "weatherLocation": "Urganch, 220100",
-  "weatherCoordinates": "41.5517903,60.6312810",
-  "useAutoLocation": false,
-  "weatherEnabled": true,
-  "showLauncherButton": true,
-  "showWorkspaceSwitcher": true,
-  "showFocusedWindow": true,
-  "showWeather": true,
-  "showMusic": true,
-  "showClipboard": true,
-  "showCpuUsage": true,
-  "showMemUsage": true,
-  "showCpuTemp": true,
-  "showGpuTemp": true,
-  "selectedGpuIndex": 0,
-  "enabledGpuPciIds": [],
-  "showSystemTray": true,
-  "showClock": true,
-  "showNotificationButton": true,
-  "showBattery": true,
-  "showControlCenterButton": true,
-  "controlCenterShowNetworkIcon": true,
-  "controlCenterShowBluetoothIcon": true,
-  "controlCenterShowAudioIcon": true,
-  "controlCenterWidgets": [
-    {
-      "id": "volumeSlider",
-      "enabled": true,
-      "width": 50
-    },
-    {
-      "id": "brightnessSlider",
-      "enabled": true,
-      "width": 50
-    },
-    {
-      "id": "wifi",
-      "enabled": true,
-      "width": 50
-    },
-    {
-      "id": "builtin_vpn",
-      "enabled": true,
-      "width": 50
-    },
-    {
-      "id": "audioOutput",
-      "enabled": true,
-      "width": 50
-    },
-    {
-      "id": "audioInput",
-      "enabled": true,
-      "width": 50
-    },
-    {
-      "id": "bluetooth",
-      "enabled": true,
-      "width": 50
-    },
-    {
-      "id": "battery",
-      "enabled": true,
-      "width": 50
-    }
-  ],
-  "showWorkspaceIndex": true,
-  "showWorkspacePadding": false,
-  "showWorkspaceApps": true,
-  "maxWorkspaceIcons": 3,
-  "workspacesPerMonitor": true,
-  "workspaceNameIcons": {},
-  "waveProgressEnabled": true,
-  "clockCompactMode": false,
-  "focusedWindowCompactMode": true,
-  "runningAppsCompactMode": true,
-  "runningAppsCurrentWorkspace": false,
-  "clockDateFormat": "",
-  "lockDateFormat": "",
-  "mediaSize": 1,
-  "dankBarLeftWidgets": [
-    "launcherButton",
-    "workspaceSwitcher",
-    "focusedWindow"
-  ],
-  "dankBarCenterWidgets": [
-    "music",
-    "clock",
-    "weather"
-  ],
-  "dankBarRightWidgets": [
-    {
-      "id": "systemTray",
-      "enabled": true
-    },
-    "clipboard",
-    {
-      "id": "cpuUsage",
-      "enabled": true,
-      "minimumWidth": true
-    },
-    {
-      "id": "memUsage",
-      "enabled": true,
-      "minimumWidth": true
-    },
-    "notificationButton",
-    "battery",
-    "controlCenterButton"
-  ],
-  "appLauncherViewMode": "grid",
-  "spotlightModalViewMode": "grid",
-  "networkPreference": "auto",
-  "iconTheme": "System Default",
-  "launcherLogoMode": "os",
-  "launcherLogoCustomPath": "",
-  "launcherLogoColorOverride": "#00000000",
-  "launcherLogoColorInvertOnMode": true,
-  "launcherLogoBrightness": 0.5,
-  "launcherLogoContrast": 1,
-  "launcherLogoSizeOffset": 0,
-  "fontFamily": "Fira Code",
-  "monoFontFamily": "FiraCode Nerd Font Mono",
-  "fontWeight": 500,
-  "fontScale": 1,
-  "dankBarFontScale": 1,
-  "notepadUseMonospace": true,
-  "notepadFontFamily": "",
-  "notepadFontSize": 14,
-  "notepadShowLineNumbers": false,
-  "notepadTransparencyOverride": -1,
-  "notepadLastCustomTransparency": 0.7,
-  "gtkThemingEnabled": false,
-  "qtThemingEnabled": false,
-  "showDock": false,
-  "dockAutoHide": false,
-  "dockGroupByApp": false,
-  "dockOpenOnOverview": false,
-  "dockPosition": 1,
-  "dockSpacing": 4,
-  "dockBottomGap": 0,
-  "cornerRadius": 12,
-  "notificationOverlayEnabled": false,
-  "dankBarAutoHide": false,
-  "dankBarOpenOnOverview": false,
-  "dankBarVisible": true,
-  "dankBarSpacing": 4,
-  "dankBarBottomGap": 0,
-  "dankBarInnerPadding": 8,
-  "dankBarSquareCorners": false,
-  "dankBarNoBackground": false,
-  "dankBarGothCornersEnabled": true,
-  "dankBarBorderEnabled": false,
-  "dankBarPosition": 0,
-  "lockScreenShowPowerActions": true,
-  "hideBrightnessSlider": false,
-  "widgetBackgroundColor": "s",
-  "surfaceBase": "s",
-  "notificationTimeoutLow": 5000,
-  "notificationTimeoutNormal": 5000,
-  "notificationTimeoutCritical": 0,
-  "notificationPopupPosition": 0,
-  "osdAlwaysShowValue": false,
-  "screenPreferences": {
-    "topBar": [
-      "all"
-    ],
-    "dankBar": [
-      "all"
-    ],
-    "dock": [
-      "all"
-    ]
-  },
-  "animationSpeed": 4
+	"currentThemeName": "cat-red",
+	"customThemeFile": "",
+	"matugenScheme": "scheme-tonal-spot",
+	"dankBarTransparency": 0,
+	"dankBarWidgetTransparency": 1,
+	"popupTransparency": 1,
+	"dockTransparency": 1,
+	"use24HourClock": true,
+	"useFahrenheit": false,
+	"nightModeEnabled": false,
+	"weatherLocation": "Urganch, 220100",
+	"weatherCoordinates": "41.5517903,60.6312810",
+	"useAutoLocation": false,
+	"weatherEnabled": true,
+	"showLauncherButton": true,
+	"showWorkspaceSwitcher": true,
+	"showFocusedWindow": true,
+	"showWeather": true,
+	"showMusic": true,
+	"showClipboard": true,
+	"showCpuUsage": true,
+	"showMemUsage": true,
+	"showCpuTemp": true,
+	"showGpuTemp": true,
+	"selectedGpuIndex": 0,
+	"enabledGpuPciIds": [],
+	"showSystemTray": true,
+	"showClock": true,
+	"showNotificationButton": true,
+	"showBattery": true,
+	"showControlCenterButton": true,
+	"controlCenterShowNetworkIcon": true,
+	"controlCenterShowBluetoothIcon": true,
+	"controlCenterShowAudioIcon": true,
+	"controlCenterWidgets": [
+		{
+			"id": "volumeSlider",
+			"enabled": true,
+			"width": 50
+		},
+		{
+			"id": "brightnessSlider",
+			"enabled": true,
+			"width": 50
+		},
+		{
+			"id": "wifi",
+			"enabled": true,
+			"width": 50
+		},
+		{
+			"id": "builtin_vpn",
+			"enabled": true,
+			"width": 50
+		},
+		{
+			"id": "audioOutput",
+			"enabled": true,
+			"width": 50
+		},
+		{
+			"id": "audioInput",
+			"enabled": true,
+			"width": 50
+		},
+		{
+			"id": "bluetooth",
+			"enabled": true,
+			"width": 50
+		},
+		{
+			"id": "battery",
+			"enabled": true,
+			"width": 50
+		}
+	],
+	"showWorkspaceIndex": true,
+	"showWorkspacePadding": false,
+	"showWorkspaceApps": true,
+	"maxWorkspaceIcons": 3,
+	"workspacesPerMonitor": true,
+	"workspaceNameIcons": {},
+	"waveProgressEnabled": true,
+	"clockCompactMode": false,
+	"focusedWindowCompactMode": true,
+	"runningAppsCompactMode": true,
+	"runningAppsCurrentWorkspace": false,
+	"clockDateFormat": "",
+	"lockDateFormat": "",
+	"mediaSize": 1,
+	"dankBarLeftWidgets": [
+		"launcherButton",
+		"workspaceSwitcher",
+		"focusedWindow"
+	],
+	"dankBarCenterWidgets": ["music", "clock", "weather"],
+	"dankBarRightWidgets": [
+		{
+			"id": "systemTray",
+			"enabled": true
+		},
+		"clipboard",
+		{
+			"id": "cpuUsage",
+			"enabled": true,
+			"minimumWidth": true
+		},
+		{
+			"id": "memUsage",
+			"enabled": true,
+			"minimumWidth": true
+		},
+		"notificationButton",
+		"battery",
+		"controlCenterButton"
+	],
+	"appLauncherViewMode": "grid",
+	"spotlightModalViewMode": "grid",
+	"networkPreference": "auto",
+	"iconTheme": "System Default",
+	"launcherLogoMode": "os",
+	"launcherLogoCustomPath": "",
+	"launcherLogoColorOverride": "#00000000",
+	"launcherLogoColorInvertOnMode": true,
+	"launcherLogoBrightness": 0.5,
+	"launcherLogoContrast": 1,
+	"launcherLogoSizeOffset": 0,
+	"fontFamily": "Fira Code",
+	"monoFontFamily": "FiraCode Nerd Font Mono",
+	"fontWeight": 500,
+	"fontScale": 1,
+	"dankBarFontScale": 1,
+	"notepadUseMonospace": true,
+	"notepadFontFamily": "",
+	"notepadFontSize": 14,
+	"notepadShowLineNumbers": false,
+	"notepadTransparencyOverride": -1,
+	"notepadLastCustomTransparency": 0.7,
+	"gtkThemingEnabled": false,
+	"qtThemingEnabled": false,
+	"showDock": false,
+	"dockAutoHide": false,
+	"dockGroupByApp": false,
+	"dockOpenOnOverview": false,
+	"dockPosition": 1,
+	"dockSpacing": 4,
+	"dockBottomGap": 0,
+	"cornerRadius": 12,
+	"notificationOverlayEnabled": false,
+	"dankBarAutoHide": false,
+	"dankBarOpenOnOverview": false,
+	"dankBarVisible": true,
+	"dankBarSpacing": 4,
+	"dankBarBottomGap": 0,
+	"dankBarInnerPadding": 8,
+	"dankBarSquareCorners": false,
+	"dankBarNoBackground": false,
+	"dankBarGothCornersEnabled": true,
+	"dankBarBorderEnabled": false,
+	"dankBarPosition": 0,
+	"lockScreenShowPowerActions": true,
+	"hideBrightnessSlider": false,
+	"widgetBackgroundColor": "s",
+	"surfaceBase": "sth",
+	"notificationTimeoutLow": 5000,
+	"notificationTimeoutNormal": 5000,
+	"notificationTimeoutCritical": 0,
+	"notificationPopupPosition": 0,
+	"osdAlwaysShowValue": false,
+	"screenPreferences": {
+		"topBar": ["all"],
+		"dankBar": ["all"],
+		"dock": ["all"]
+	},
+	"animationSpeed": 4
 }
