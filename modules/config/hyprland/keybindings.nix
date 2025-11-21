@@ -3,10 +3,10 @@
 {
   wayland.windowManager.hyprland.settings = {
     bindl = [
-      ", XF86AudioRaiseVolume, exec, noctalia-shell ipc call volume increase"
-      ", XF86AudioLowerVolume, exec, noctalia-shell ipc call volume decrease"
-      ", XF86AudioMute, exec, noctalia-shell ipc call volume muteOutput"
-      ", XF86AudioMicMute, exec, noctalia-shell ipc call volume muteInput"
+      ", XF86AudioRaiseVolume, exec, dms ipc call audio increase"
+      ", XF86AudioLowerVolume, exec, dms ipc call audio decrease"
+      ", XF86AudioMute, exec, dms ipc call audio mute"
+      ", XF86AudioMicMute, exec, dms ipc call audio micmute"
       ", XF86MonBrightnessUp, exec, brightnessctl set +5%"
       ", XF86MonBrightnessDown, exec, brightnessctl set 5%-"
 
@@ -24,9 +24,9 @@
 
     bind = [
       ", Print, exec, grim -g \"$(slurp)\" - | swappy -f -"
-      "$mod, Space, exec, noctalia-shell ipc call launcher toggle"
+      "$mod, Space, exec, dms ipc call spotlight toggle"
       "$mod SHIFT, Space, exec, vicinae toggle"
-      "$mod, V, exec, noctalia-shell ipc call launcher clipboard"
+      "$mod, V, exec, dms ipc call clipboard toggle"
       "$mod, Return, exec, ghostty"
       "$mod, W, exec, zen"
       "$mod, E, exec, dolphin"
@@ -34,7 +34,7 @@
       "$mod, T, exec, Telegram"
       "$mod, D, exec, discord"
       "$mod, G, exec, lutris"
-      "$mod, L, exec, noctalia-shell ipc call lockScreen lock" # lock screen
+      "$mod, L, exec, dms ipc call lock lock" # lock screen
       "$mod, Q, killactive" # killactive
       "$mod, F, togglefloating"
       "$mod SHIFT, F, fullscreen"
