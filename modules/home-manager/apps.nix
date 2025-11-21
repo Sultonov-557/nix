@@ -9,7 +9,6 @@
     pavucontrol
     hyprnome
     yandex-music
-    gimp
     qbittorrent-enhanced
     baobab
     telegram-desktop
