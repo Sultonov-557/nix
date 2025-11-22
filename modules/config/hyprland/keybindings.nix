@@ -3,8 +3,8 @@
 {
   wayland.windowManager.hyprland.settings = {
     bindl = [
-      ", XF86AudioRaiseVolume, exec, dms ipc call audio increase"
-      ", XF86AudioLowerVolume, exec, dms ipc call audio decrease"
+      ", XF86AudioRaiseVolume, exec, pamixer -i 5"
+      ", XF86AudioLowerVolume, exec, pamixer -d 5"
       ", XF86AudioMute, exec, dms ipc call audio mute"
       ", XF86AudioMicMute, exec, dms ipc call audio micmute"
       ", XF86MonBrightnessUp, exec, brightnessctl set +5%"
