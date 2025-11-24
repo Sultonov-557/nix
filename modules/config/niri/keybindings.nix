@@ -41,7 +41,7 @@
         "Mod+L".action.spawn = sh "dms ipc call lock lock";
 
         # Overview
-        "Mod".action.show-hotkey-overlay = [ ];
+        "Mod+Tab".action.show-hotkey-overlay = [ ];
 
         # Window management
         "Mod+Q".action.close-window = [ ];
