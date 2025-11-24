@@ -23,6 +23,15 @@
       };
     };
 
+    overview = {
+      zoom = 1.0;
+    };
+
+    cursor = {
+      xcursor-theme = "Bibata-Modern-Classic";
+      xcursor-size = 24;
+    };
+
     layout = {
       gaps = 5;
       center-focused-column = "never";
