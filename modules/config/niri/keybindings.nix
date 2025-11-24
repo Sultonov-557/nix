@@ -40,6 +40,9 @@
         "Mod+G".action.spawn = "lutris";
         "Mod+L".action.spawn = sh "dms ipc call lock lock";
 
+        # Overview
+        "Mod".action.show-hotkey-overlay = [ ];
+
         # Window management
         "Mod+Q".action.close-window = [ ];
         "Mod+F".action.fullscreen-window = [ ];
