@@ -6,6 +6,12 @@
     stylix.url = "github:danth/stylix";
     stylix.inputs.nixpkgs.follows = "nixpkgs";
     hyprland.url = "github:hyprwm/Hyprland";
+
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -98,6 +104,7 @@
                     imports = [
                       ./home.nix
                       inputs.dankMaterialShell.homeModules.dankMaterialShell.default
+                      inputs.niri.homeModules.niri
                       inputs.noctalia.homeModules.default
                       inputs.zen-browser.homeModules.beta
                       inputs.zen-nebula.homeModules.default
