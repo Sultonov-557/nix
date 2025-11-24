@@ -1,4 +1,4 @@
-{ ... }:
+{ inputs, ... }:
 
 {
   imports = [
@@ -11,6 +11,7 @@
     ./modules/nixos/fonts.nix
     ./modules/nixos/hardware.nix
     ./modules/nixos/network.nix
+    ./modules/nixos/niri.nix
     ./modules/nixos/nix.nix
     ./modules/nixos/nvidia.nix
     ./modules/nixos/pipewire.nix

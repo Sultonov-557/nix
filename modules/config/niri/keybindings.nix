@@ -42,9 +42,7 @@
 
         # Window management
         "Mod+Q".action.close-window = [ ];
-        "Mod+F".action.set-window-height = {
-          proportion = 1.0;
-        };
+        "Mod+F".action.set-window-height = "100%";
         "Mod+Shift+F".action.fullscreen-window = [ ];
 
         # Focus movement
