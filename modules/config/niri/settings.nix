@@ -32,15 +32,15 @@
         { proportion = 0.66; }
       ];
       default-column-width = {
-        proportion = 0.5;
+        proportion = 1.0;
       };
       focus-ring = {
         enable = true;
-        width = 2;
+        width = 1;
       };
       border = {
         enable = true;
-        width = 2;
+        width = 1;
       };
     };
 
