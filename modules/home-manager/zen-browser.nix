@@ -8,7 +8,7 @@
 {
 
   zen-nebula = {
-    enable = true;
+    enable = false;
     profile = "wgxxtqm5.Default (release)";
   };
 

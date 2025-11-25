@@ -11,6 +11,11 @@
 
   home.stateVersion = "25.05";
 
+  home.sessionVariables = {
+    # specific to NixOS, forces Electron apps to use Wayland
+    NIXOS_OZONE_WL = "1";
+  };
+
   xdg.mimeApps = {
     enable = true;
   };

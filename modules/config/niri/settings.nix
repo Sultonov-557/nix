@@ -4,6 +4,14 @@
   programs.niri.settings = {
     prefer-no-csd = true;
 
+    window-rules = [
+      {
+        matches = [ { app-id = "^zen-beta$"; } ];
+        opacity = 0.80;
+        draw-border-with-background = false;
+      }
+    ];
+
     input = {
       keyboard = {
         xkb = {
@@ -25,11 +33,6 @@
 
     overview = {
       zoom = 1.0;
-    };
-
-    cursor = {
-      xcursor-theme = "Bibata-Modern-Classic";
-      xcursor-size = 24;
     };
 
     layout = {

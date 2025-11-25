@@ -42,9 +42,11 @@
     substituters = [
       "https://cache.nixos.org/"
       "https://hyprland.cachix.org"
+      "https://cache.nix.m7.rs"
     ];
     trusted-public-keys = [
       "hyprland.cachix.org-1:ZFI3rT84a1xr0EJ4yqVRK6p+Kx2HuhVE3rVb9VQwC5k="
+      "niri:7kPRy+bwoMP2GiLMR20qHUUiQ1Tg96YapZFsyvokm90="
     ];
   };
 

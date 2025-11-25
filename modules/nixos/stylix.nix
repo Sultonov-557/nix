@@ -8,6 +8,12 @@ let
 
 in
 {
+
+  environment.variables = {
+    XCURSOR_THEME = " catppuccin-mocha-dark-cursors";
+    XCURSOR_SIZE = "24";
+  };
+
   stylix = {
     enable = true;
     polarity = "dark";
