@@ -1,6 +1,7 @@
 { pkgs, inputs, ... }:
 {
   home.packages = with pkgs; [
+    gnome-boxes
     gemini-cli
     antigravity
     cursor-cli

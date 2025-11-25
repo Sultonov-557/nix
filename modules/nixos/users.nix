@@ -10,6 +10,8 @@
       "vboxsf"
       "docker"
       "podman"
+      "kvm"
+      "libvirtd"
     ];
     shell = pkgs.zsh;
     packages = with pkgs; [ ];
