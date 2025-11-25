@@ -31,6 +31,11 @@
       };
     };
 
+    cursor = {
+      theme = "catppuccin-mocha-dark-cursors";
+      size = 24;
+    };
+
     overview = {
       zoom = 1.0;
     };

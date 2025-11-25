@@ -36,7 +36,7 @@
         "Mod+E".action.spawn = "dolphin";
         "Mod+M".action.spawn = "yandex-music";
         "Mod+T".action.spawn = "Telegram";
-        "Mod+D".action.spawn = "discord";
+        "Mod+D".action.spawn = "vesktop";
         "Mod+G".action.spawn = "lutris";
         "Mod+L".action.spawn = sh "dms ipc call lock lock";
 
@@ -49,22 +49,22 @@
 
         # Focus movement
         "Mod+Left".action.focus-column-left = [ ];
-        "Mod+Down".action.focus-window-down = [ ];
-        "Mod+Up".action.focus-window-up = [ ];
+        "Mod+Down".action.focus-workspace-down = [ ];
+        "Mod+Up".action.focus-workspace-up = [ ];
         "Mod+Right".action.focus-column-right = [ ];
         "Mod+H".action.focus-column-left = [ ];
-        "Mod+J".action.focus-window-down = [ ];
-        "Mod+K".action.focus-window-up = [ ];
+        "Mod+J".action.focus-workspace-down = [ ];
+        "Mod+K".action.focus-workspace-up = [ ];
         "Mod+Semicolon".action.focus-column-right = [ ];
 
         # Window movement
         "Mod+Shift+Left".action.move-column-left = [ ];
-        "Mod+Shift+Down".action.move-window-down = [ ];
-        "Mod+Shift+Up".action.move-window-up = [ ];
+        "Mod+Shift+Down".action.move-column-to-workspace-down = [ ];
+        "Mod+Shift+Up".action.move-column-to-workspace-up = [ ];
         "Mod+Shift+Right".action.move-column-right = [ ];
         "Mod+Shift+H".action.move-column-left = [ ];
-        "Mod+Shift+J".action.move-window-down = [ ];
-        "Mod+Shift+K".action.move-window-up = [ ];
+        "Mod+Shift+J".action.move-column-to-workspace-down = [ ];
+        "Mod+Shift+K".action.move-column-to-workspace-up = [ ];
         "Mod+Shift+Semicolon".action.move-column-right = [ ];
 
         # Workspaces
@@ -93,8 +93,6 @@
         "Mod+R".action.switch-preset-column-width = [ ];
         "Mod+Minus".action.set-column-width = "-10%";
         "Mod+Equal".action.set-column-width = "+10%";
-        "Mod+Shift+Minus".action.set-window-height = "-10%";
-        "Mod+Shift+Equal".action.set-window-height = "+10%";
       };
   };
 }
