@@ -6,9 +6,14 @@
     stylix.url = "github:danth/stylix";
     stylix.inputs.nixpkgs.follows = "nixpkgs";
 
-    niri = {
-      url = "github:sodiboo/niri-flake";
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    split-monitor-workspaces = {
+      url = "github:Duckonaut/split-monitor-workspaces";
+      inputs.hyprland.follows = "hyprland";
     };
 
     home-manager = {
@@ -99,7 +104,6 @@
                     imports = [
                       ./home.nix
                       inputs.dankMaterialShell.homeModules.dankMaterialShell.default
-                      inputs.niri.homeModules.niri
                       inputs.zen-browser.homeModules.beta
                       inputs.zen-nebula.homeModules.default
                       inputs.xmcl.homeModules.xmcl
