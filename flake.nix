@@ -21,8 +21,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    noctalia = {
-      url = "github:noctalia-dev/noctalia-shell";
+    xmcl = {
+      url = "github:x45iq/xmcl-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -100,9 +100,9 @@
                       ./home.nix
                       inputs.dankMaterialShell.homeModules.dankMaterialShell.default
                       inputs.niri.homeModules.niri
-                      inputs.noctalia.homeModules.default
                       inputs.zen-browser.homeModules.beta
                       inputs.zen-nebula.homeModules.default
+                      inputs.xmcl.homeModules.xmcl
                       inputs.nixcord.homeModules.nixcord
                       inputs.nix-flatpak.homeManagerModules.nix-flatpak
                     ];

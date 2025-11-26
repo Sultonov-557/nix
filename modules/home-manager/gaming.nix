@@ -6,8 +6,16 @@
   };
   services.flatpak = {
     enable = true;
-    packages = [
-      "app.xmcl.voxelum"
+  };
+
+  programs.xmcl = {
+    enable = true;
+    commandLineArgs = [
+      "--password-store=\"gnome-libsecret\""
+    ];
+    jres = [
+      pkgs.jre8
+      pkgs.temurin-jre-bin-17
     ];
   };
 

@@ -31,7 +31,6 @@
     (import ./modules/home-manager/niri.nix { inherit pkgs lib inputs; })
     ./modules/home-manager/wallpaper.nix
     ./modules/home-manager/dms.nix
-    ./modules/home-manager/noctalia.nix
     ./modules/home-manager/neovim.nix
   ];
 }

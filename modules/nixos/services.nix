@@ -73,5 +73,4 @@
     };
     polkit.enable = true;
   };
-
 }

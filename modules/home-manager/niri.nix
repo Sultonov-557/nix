@@ -6,10 +6,6 @@
 }:
 
 {
-  xdg.portal = {
-    enable = lib.mkForce true;
-  };
-
   imports = [
     ../config/niri/keybindings.nix
     ../config/niri/monitors.nix
