@@ -2,7 +2,7 @@
   description = "My NixOS config";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     stylix.url = "github:danth/stylix";
     stylix.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -23,6 +23,11 @@
 
     dankMaterialShell = {
       url = "github:AvengeMedia/DankMaterialShell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    ags = {
+      url = "github:Aylur/ags";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -104,6 +109,7 @@
                     imports = [
                       ./home.nix
                       inputs.dankMaterialShell.homeModules.dankMaterialShell.default
+                      inputs.ags.homeManagerModules.default
                       inputs.zen-browser.homeModules.beta
                       inputs.zen-nebula.homeModules.default
                       inputs.xmcl.homeModules.xmcl

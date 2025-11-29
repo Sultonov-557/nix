@@ -1,5 +1,26 @@
 {
   "nodes": {
+    "ags": {
+      "inputs": {
+        "astal": "astal",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1763857935,
+        "narHash": "sha256-oZCv7FbfjUb07MxZbCAmtPFN+z1rTNL6lNrHPykn5WQ=",
+        "owner": "Aylur",
+        "repo": "ags",
+        "rev": "7d6493656c160bedde29716e3eb391180ad538b1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Aylur",
+        "repo": "ags",
+        "type": "github"
+      }
+    },
     "aquamarine": {
       "inputs": {
         "hyprutils": [
@@ -30,6 +51,27 @@
       "original": {
         "owner": "hyprwm",
         "repo": "aquamarine",
+        "type": "github"
+      }
+    },
+    "astal": {
+      "inputs": {
+        "nixpkgs": [
+          "ags",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1762012522,
+        "narHash": "sha256-ncEN4OVFM5M9VFc4oR3gOI5K8r99GcYxtU+Cf4Z8pbs=",
+        "owner": "aylur",
+        "repo": "astal",
+        "rev": "671d4229c798834190a50fb8b8d8addd19b529e9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "aylur",
+        "repo": "astal",
         "type": "github"
       }
     },
@@ -750,15 +792,16 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1764157852,
-        "narHash": "sha256-5tUNpM4K8ePm3VhL6ODGAZl/7+/I5LQbtyNovwC361o=",
+        "lastModified": 1763966396,
+        "narHash": "sha256-6eeL1YPcY1MV3DDStIDIdy/zZCDKgHdkCmsrLJFiZf0=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "7e22656f5a4f58ae94b0f4e704385b274b37b7e1",
+        "rev": "5ae3b07d8d6527c42f17c876e404993199144b6a",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
+        "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -849,6 +892,7 @@
     },
     "root": {
       "inputs": {
+        "ags": "ags",
         "dankMaterialShell": "dankMaterialShell",
         "home-manager": "home-manager",
         "hyprland": "hyprland",

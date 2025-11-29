@@ -23,6 +23,8 @@
     lxqt.lxqt-policykit
   ];
 
+  programs.ags.enable = true;
+
   services = {
     cliphist = {
       enable = true;
