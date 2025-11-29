@@ -26,6 +26,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    caelestia-shell = {
+      url = "github:caelestia-dots/shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     ags = {
       url = "github:Aylur/ags";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -109,6 +114,7 @@
                     imports = [
                       ./home.nix
                       inputs.dankMaterialShell.homeModules.dankMaterialShell.default
+                      inputs.caelestia-shell.homeManagerModules.default
                       inputs.ags.homeManagerModules.default
                       inputs.zen-browser.homeModules.beta
                       inputs.zen-nebula.homeModules.default

@@ -1,9 +1,14 @@
-{ pkgs, inputs, ... }:
+{
+  pkgs,
+  inputs,
+  lib,
+  ...
+}:
 
 {
   programs.hyprland = {
     enable = true;
-    package = pkgs.hyprland;
+    package = lib.mkForce pkgs.hyprland;
     xwayland.enable = true;
   };
 }
