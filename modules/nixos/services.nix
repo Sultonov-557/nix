@@ -29,6 +29,8 @@
   };
 
   virtualisation = {
+    virtualbox.host.enable = true;
+
     libvirtd.enable = true;
     containers.enable = true;
     podman = {
