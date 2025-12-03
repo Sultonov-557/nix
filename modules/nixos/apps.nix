@@ -23,6 +23,7 @@
     docker
     nodePackages_latest.nodejs
     bun
+    yarn
   ];
 
   security.polkit.extraConfig = ''

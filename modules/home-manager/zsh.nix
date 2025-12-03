@@ -85,8 +85,14 @@
     enableZshIntegration = true;
   };
 
+  programs.navi = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
   home.packages = with pkgs; [
     zsh-powerlevel10k
+    smassh
 
     # Git & code tools
     git
@@ -110,6 +116,7 @@
     aria2
 
     # File ops & search
+    superfile
     eza
     fd
     ripgrep
