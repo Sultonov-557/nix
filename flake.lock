@@ -983,11 +983,11 @@
         "nix-filter": "nix-filter"
       },
       "locked": {
-        "lastModified": 1763147678,
-        "narHash": "sha256-iIp6EJDMqZiAFUTRWjFETZ0cXgHbDEyJtBlr5dlS5HE=",
+        "lastModified": 1764432817,
+        "narHash": "sha256-jpWfVQb0UKAQlbx+bakNZR2ft8cvNjuoOPg5agHQdd8=",
         "owner": "Duckonaut",
         "repo": "split-monitor-workspaces",
-        "rev": "a01946c0a81f94463232df7fd5c9b7d2581f89e1",
+        "rev": "c770b768ded9e6fbfa7d3a4c5283bae06bab7b35",
         "type": "github"
       },
       "original": {
