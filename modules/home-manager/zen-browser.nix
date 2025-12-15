@@ -7,6 +7,11 @@
 
 {
 
+  home.packages = with pkgs; [
+    ffmpeg-full
+    gst_all_1.gst-libav
+  ];
+
   zen-nebula = {
     enable = false;
     profile = "wgxxtqm5.Default (release)";

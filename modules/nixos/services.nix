@@ -29,7 +29,10 @@
   };
 
   virtualisation = {
-    virtualbox.host.enable = true;
+    virtualbox.host = {
+      enable = true;
+      enableExtensionPack = true;
+    };
 
     libvirtd.enable = true;
     containers.enable = true;
@@ -56,6 +59,7 @@
     port = 6379;
   };
 
+  services.mullvad-vpn.enable = true;
   security = {
     rtkit.enable = true;
     pam.services = {

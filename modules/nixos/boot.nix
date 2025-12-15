@@ -8,6 +8,12 @@
   boot.loader.grub.useOSProber = true;
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelModules = [ "uinput" ];
   boot.supportedFilesystems = [ "ntfs" ];
+  boot.kernelModules = [
+    "uinput"
+    "vboxdrv"
+    "vboxnetflt"
+    "vboxnetadp"
+    "vboxpci"
+  ];
 }
