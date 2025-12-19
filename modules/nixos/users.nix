@@ -6,6 +6,7 @@
     description = "sultonov";
     extraGroups = [
       "networkmanager"
+      "lp"
       "wheel"
       "vboxsf"
       "docker"

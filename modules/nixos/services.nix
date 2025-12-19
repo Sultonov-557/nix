@@ -28,12 +28,9 @@
     configDir = "/home/sultonov/.config/syncthing";
   };
 
-  virtualisation = {
-    virtualbox.host = {
-      enable = true;
-      enableExtensionPack = true;
-    };
+  services.printing.enable = true;
 
+  virtualisation = {
     libvirtd.enable = true;
     containers.enable = true;
     podman = {

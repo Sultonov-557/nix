@@ -23,13 +23,12 @@
     dbeaver-bin
     ghostty
     kdePackages.dolphin
+    nautilus
     gnome-disk-utility
     gnome-system-monitor
     p7zip
     lxqt.lxqt-policykit
   ];
-
-  programs.ags.enable = true;
 
   services = {
     cliphist = {

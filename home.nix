@@ -31,7 +31,6 @@
     (import ./modules/home-manager/hyprland.nix { inherit pkgs lib inputs; })
     ./modules/home-manager/wallpaper.nix
     ./modules/home-manager/dms.nix
-    ./modules/home-manager/caelestia.nix
     ./modules/home-manager/neovim.nix
   ];
 }

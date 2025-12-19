@@ -22,6 +22,7 @@
     playerctl
     docker
     nodePackages_latest.nodejs
+    python3
     bun
     yarn
   ];

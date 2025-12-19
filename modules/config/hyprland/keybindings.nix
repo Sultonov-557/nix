@@ -17,7 +17,7 @@
       "$mod, V, exec, dms ipc call clipboard toggle"
       "$mod, Return, exec, ghostty"
       "$mod, W, exec, zen"
-      "$mod, E, exec, dolphin"
+      "$mod, E, exec, nautilus"
       "$mod, M, exec, yandex-music"
       "$mod, T, exec, Telegram"
       "$mod, D, exec, vesktop"
