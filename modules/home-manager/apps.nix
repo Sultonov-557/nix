@@ -4,9 +4,13 @@
     protonvpn-gui
     wpsoffice
     gnome-boxes
+    wireshark
+    ettercap
+    nmap
     gemini-cli
     antigravity
     cursor-cli
+    opencode
     bruno
     blueman
     pavucontrol
