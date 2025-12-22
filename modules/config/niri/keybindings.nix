@@ -37,10 +37,16 @@
         "lock"
       ];
 
+      # Overview
+      "Ctrl+O".action.spawn = [
+        "niri"
+        "msg"
+        "action"
+        "toggle-overview"
+      ];
+
       # Window management
       "Super+Q".action.close-window = { };
-      "Super+F".action.toggle-float = { };
-      "Super+Shift+F".action.toggle-fullscreen = { };
 
       # Focus movement
       "Super+Left".action.focus-column-left = { };
@@ -156,4 +162,3 @@
     };
   };
 }
-
