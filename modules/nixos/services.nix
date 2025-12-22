@@ -29,6 +29,7 @@
   };
 
   services.printing.enable = true;
+  services.udev.packages = [ pkgs.via ];
 
   virtualisation = {
     libvirtd.enable = true;

@@ -29,6 +29,7 @@
     ./modules/home-manager/gaming.nix
     ./modules/home-manager/apps.nix
     (import ./modules/home-manager/hyprland.nix { inherit pkgs lib inputs; })
+    ./modules/home-manager/niri.nix
     ./modules/home-manager/wallpaper.nix
     ./modules/home-manager/dms.nix
     ./modules/home-manager/neovim.nix

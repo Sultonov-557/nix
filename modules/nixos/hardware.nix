@@ -10,6 +10,7 @@
   };
 
   hardware.uinput.enable = true;
+  hardware.keyboard.qmk.enable = true;
 
   hardware.opengl.enable = true;
   hardware.graphics = {

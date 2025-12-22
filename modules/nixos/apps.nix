@@ -11,6 +11,10 @@
   environment.sessionVariables.PATH = [ "$HOME/.cache/.bun/bin" ];
 
   environment.systemPackages = with pkgs; [
+    via
+    qmk
+    dfu-util
+    dos2unix
     nixfmt-rfc-style
     openssl
     deadnix

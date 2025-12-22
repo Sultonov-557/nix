@@ -10,6 +10,7 @@
   home.packages = with pkgs; [
     ffmpeg-full
     gst_all_1.gst-libav
+    chromium
   ];
 
   zen-nebula = {
